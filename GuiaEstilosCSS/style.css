@@ -6,20 +6,20 @@
 
 body{
     font-family: Arial;
-    background-color: var(--fondo-color);
+    background-color: var(--color-fondo);
 } 
 
 
 .barraNavegahacion{
-    background-color: var(--fondo-color);
+    background-color: var(--color-fondo);
 
 }
 
 footer{
-    background-color: var(--fondo-color);
+    background-color: var(--color-fondo);
 }
 
 .boton{
-    background-color: var(--fondo-boton);
+    background-color: var(--color-boton);
 }
 
