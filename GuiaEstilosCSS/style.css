@@ -1,0 +1,28 @@
+
+:root{
+    --color-fondo: pink; 
+}
+
+body{
+    font-family: Arial;
+    background-color: var(--fondo-color);
+} 
+
+
+.barraNavegahacion{
+    background-color: var(--fondo-color);
+
+}
+
+footer{
+    background-color: var(--fondo-color);
+}
+
+.boton{
+
+}
+
+.Titulo{
+
+}
+
