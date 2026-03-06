@@ -36,6 +36,7 @@ header{
 
 footer{
     background-color: var(--color-fondo);
+    color: white;
 }
 
 .boton{
