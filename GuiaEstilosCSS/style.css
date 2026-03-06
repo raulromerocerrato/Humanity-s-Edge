@@ -1,11 +1,10 @@
-
 :root{
     --color-fondo-oscuro: rgb(92, 92, 92);
     --color-fondo-claro: white;
 
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
-    --color-letras-claro: white; 
+    --color-letras-radiactivo: #01ed36; 
 }
 
 body{
@@ -19,7 +18,6 @@ header{
     align-items: center;
     gap: 100px;
     background-color: var(--color-fondo-oscuro);
-    color: var(--color-letras-claro);
 }
 
 
@@ -32,6 +30,10 @@ header{
 .barraNavegacio{
     display: flex;
     gap: 100px;
+}
+
+.barraNavegacio a{
+    color: var(--color-letras-radiactivo);
 }
 
 footer{
