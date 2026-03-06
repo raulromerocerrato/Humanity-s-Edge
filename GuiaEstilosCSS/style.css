@@ -58,10 +58,15 @@ footer{
     gap: 15px;
 }
 
+footer a {
+    color: var(--color-letras-radiactivo);
+}
+
 .tamañologoFooter{
     width: 250px;
     height: 120px;
 }
 .boton{
     background-color: var(--color-boton);
+    
 }
