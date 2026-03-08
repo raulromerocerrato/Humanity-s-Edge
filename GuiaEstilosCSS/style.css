@@ -34,6 +34,11 @@ header{
 
 .barraNavegacio a{
     color: var(--color-letras-radiactivo);
+    text-decoration: none;
+}
+
+.barraNavegacio a:hover{
+    color: var(--color-boton-oscuro);
 }
 
 footer{
@@ -60,6 +65,11 @@ footer{
 
 footer a {
     color: var(--color-letras-radiactivo);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-boton-oscuro);
 }
 
 .tamañologoFooter{
