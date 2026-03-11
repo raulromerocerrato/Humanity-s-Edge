@@ -37,6 +37,7 @@ header{
 .barraNavegacio a{
     color: var(--color-letras-radiactivo);
     text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
     padding: 25px 40px;
     transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
@@ -57,6 +58,7 @@ footer{
     display: flex;
     gap: 100px;
     justify-content: center;
+    font-weight: bold;
     background-color: var(--color-fondo);
     margin: 30px 0px;
 }
