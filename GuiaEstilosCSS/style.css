@@ -4,18 +4,20 @@
 
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
-    --color-letras-radiactivo: #01ed36; 
+    --color-letras-radiactivo: #01ed36;
+    --color-radiactivo-oscuro: #026417;
 }
 
 body{
     font-family: Arial;
     background-color: var(--color-fondo-oscuro);
-
+    margin: 0;
 }
 
 header{
     display: flex;  
     align-items: center;
+    margin: 0;
     gap: 100px;
     background-color: var(--color-fondo-oscuro);
 }
@@ -29,16 +31,25 @@ header{
 
 .barraNavegacio{
     display: flex;
-    gap: 100px;
 }
 
 .barraNavegacio a{
     color: var(--color-letras-radiactivo);
     text-decoration: none;
+    border-radius: 5px;
+    padding: 25px 40px;
+    transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
 
 .barraNavegacio a:hover{
-    text-decoration: underline;
+    background-color: var(--color-letras-radiactivo);
+    color: black;
+    font-weight: bold;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid var(--color-letras-radiactivo);
 }
 
 footer{
@@ -46,7 +57,7 @@ footer{
     gap: 100px;
     justify-content: center;
     background-color: var(--color-fondo);
-    color: white;
+    margin: 30px 0px;
 }
 
 .enllaçInteres{
@@ -70,6 +81,12 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.logoFooter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .tamañologoFooter{
