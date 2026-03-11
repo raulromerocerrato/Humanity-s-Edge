@@ -1,0 +1,38 @@
+
+
+.imatgePortada img {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.infoPagines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.infoPagines button {
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.infoPagines button h2 {
+    color: #01ED36;
+    margin-bottom: 10px;
+}
+.infoPagines button p {
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.infoPagines button:hover {
+    transform: scale(1.05);
+    box-shadow: #01ED36 0px 0px 10px;
+}
+
