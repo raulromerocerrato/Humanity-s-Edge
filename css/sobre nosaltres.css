@@ -1,0 +1,53 @@
+:root{
+    --color-fondo-oscuro: rgb(92, 92, 92);
+    --color-fondo-claro: white;
+    --color-boton-oscuro: red; 
+    --color-boton-claro: blue; 
+    --color-letras-radiactivo: #01ed36;
+    --color-radiactivo-oscuro: #026417;
+    --color-texto: white;
+}
+
+.creador{
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+.contenidoNosaltres{
+    padding: 70px;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+
+}
+
+.IdeaDelJoc{
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.ImgNosaltres{
+    width: 400px;
+    height: 250px;
+    background-color: var(--color-fondo-claro);
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+
+}
+
+h2{
+    color: var(--color-letras-radiactivo);
+}
+
+p{
+    color: var(--color-texto);
+    font-size: 16px;
+}

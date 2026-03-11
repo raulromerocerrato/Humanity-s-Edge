@@ -1,4 +1,11 @@
-
+:root{
+    --color-fondo-oscuro: rgb(92, 92, 92);
+    --color-fondo-claro: white;
+    --color-boton-oscuro: red; 
+    --color-boton-claro: blue; 
+    --color-letras-radiactivo: #01ed36;
+    --color-radiactivo-oscuro: #026417;
+}
 
 .imatgePortada img {
     width: 100%;
@@ -21,7 +28,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .infoPagines button h2 {
-    color: #01ED36;
+    color: var(--color-letras-radiactivo);
     margin-bottom: 10px;
 }
 .infoPagines button p {
@@ -32,6 +39,6 @@
 }
 .infoPagines button:hover {
     transform: scale(1.05);
-    box-shadow: #01ED36 0px 0px 10px;
+    box-shadow:var(--color-letras-radiactivo) 0px 0px 10px;
 }
 
