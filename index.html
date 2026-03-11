@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/GuiaEstilosCSS/style.css">
-    <title>Inici | Humanity's Eage</title>
-</head>
-<body>
-    
-</body>
-    <header>
-        <section class="logoHeader">
-            <img src="IMG/logoPrueba.png" alt="Logo" class="tamañologoHeader">
-        </section>
-        <section class="barraNavegacio">
-            <a href="index.html" class="">Inici</a>
-            <a href="Historia/index.html">Història</a>
-            <a href="Jugar/index.html">Jugar</a>
-            <a href="Controls/index.html">Controls</a>
-            <a href="Puntuacio/index.html">Puntuació</a>
-            <a href="Nosaltres/index.html">Nosaltres</a>
-            <a href="Contacte/index.html">Contacte</a>
-        </section>
-    </header>
-    <hr> 
-        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="GuiaEstilosCSS/style.css">
+        <link rel="stylesheet" href="css/inici.css">
+        <title>Inici | Humanity's Edge</title>
+    </head>
+    <body>
+        <header>
+            <section class="logoHeader">
+                <img src="IMG/logoPrueba.png" alt="Logo" class="tamañologoHeader">
+            </section>
+            <section class="barraNavegacio">
+                <a href="index.html">Inici</a>
+                <a href="Historia/index.html">Història</a>
+                <a href="Jugar/index.html">Jugar</a>
+                <a href="Controls/index.html">Controls</a>
+                <a href="Puntuacio/index.html">Puntuació</a>
+                <a href="Nosaltres/index.html">Nosaltres</a>
+                <a href="Contacte/index.html">Contacte</a>
+            </section>
+        </header>
+        <hr> 
+
+        <main>
+            <section class="imatgePortada">
+                <img src="IMG/imagenPortadaPrueba.png" alt="Imatge Portada">
+            </section>
+
+            <section class="infoPagines">
+                <button onclick = 'navPagina("Historia")'>
+                    <h2>Història</h2>
+                    <p>Aprengui sobre la història del joc.</p>
+                </button>
+                <button onclick='navPagina("Jugar")'>
+                    <h2>Jugar</h2>
+                    <p>Comenceu a jugar i poseu a prova les vostres habilitats.</p>
+                </button>
+                <button onclick='navPagina("Controls")'>
+                    <h2>Controls</h2>
+                    <p>Familiaritzeu-vos amb els controls del joc.</p>
+                </button>
+                <button onclick='navPagina("Puntuacio")'>
+                    <h2>Puntuació</h2>
+                    <p>Consulteu les puntuacions més altes i compareu-les amb les vostres.</p>
+                </button>
+                <button onclick='navPagina("Nosaltres")'>
+                    <h2>Sobre Nosaltres</h2>
+                    <p>Descobreixi qui som i què ens motiva a crear aquest joc.</p>
+                </button>
+                <button onclick='navPagina("Contacte")'>
+                    <h2>Contacte</h2>
+                    <p>Poseu-vos en contacte amb nosaltres per a qualsevol consulta o suggeriment.</p>
+                </button>
+
+            </section>
+            
+        </main>
+
+        <hr> 
         <footer>
             <section class="logoFooter">
                 <img src="IMG/logoPrueba.png" alt="Imatge Logo" class="tamañologoFooter">
@@ -44,5 +79,6 @@
                 </nav>
             </section>
         </footer>
+        <script src="js/inici.js"></script>
     </body>
 </html>
