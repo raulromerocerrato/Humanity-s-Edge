@@ -43,6 +43,7 @@ input{
 textarea{
     font-size: larger;
     height: 120px;
+    resize: none;
 }
 input::placeholder, textarea::placeholder {
     color: var(--color-letras-radiactivo); 
