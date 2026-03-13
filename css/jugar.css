@@ -78,3 +78,10 @@
     transform: scale(1.1);
     box-shadow: 0 0 30px var(--color-letras-radiactivo);
 }
+
+@media (max-width: 900px) {
+    .zonaInfo {
+        width: 90%;
+        gap: 20px;
+    }
+}

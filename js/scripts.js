@@ -7,6 +7,9 @@ function redireccioPagina(pagina) {
         case 'controls':
             window.location.href = '../Controls/index.html';
             break;
+        case 'puntuacio':
+            window.location.href = '../Puntuacio/index.html';
+            break;
         default:
             console.error('Pàgina no reconeguda: ' + pagina);
     }

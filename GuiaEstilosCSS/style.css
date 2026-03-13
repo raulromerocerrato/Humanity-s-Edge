@@ -48,6 +48,16 @@ header{
     font-weight: bold;
 }
 
+.botonMenu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    color: var(--color-letras-radiactivo);
+    font-size: 24px;
+    cursor: pointer;
+}
+
 hr{
     border: none;
     border-top: 1px solid var(--color-letras-radiactivo);
@@ -99,4 +109,38 @@ footer a:hover {
 .boton{
     background-color: var(--color-boton);
     
+}
+
+@media (max-width: 900px) {
+    footer{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    footer .logoFooter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header{
+        margin: 20px 0px;
+    }
+
+    .barraNavegacio {
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+        display: none;
+        background-color: var(--color-fondo-oscuro);
+    }
+
+    .botonMenu {
+        display: block;
+    }
+
+    .botonMenu:hover {
+        background-color: var(--color-letras-radiactivo);
+        color: black;
+    }
+
 }
