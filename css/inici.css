@@ -43,3 +43,8 @@
     box-shadow:var(--color-letras-radiactivo) 0px 0px 10px;
 }
 
+@media (max-width: 900px) {
+    .infoPagines {
+        grid-template-columns: 1fr;
+    }
+}
