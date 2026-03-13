@@ -34,3 +34,39 @@ function navPagina(nomPagina){
             break;
     }
 }
+
+function afegirMissatge() {
+    document.addEventListener('DOMContentLoaded', () => {
+        const formulari = document.getElementById('meuFormulari');
+
+        formulari.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const dades = {
+                nom: document.getElementById('nom').value,
+                email: document.getElementById('email').value,
+                missatge: document.getElementById('missatge').value,
+                data: new Date().toLocaleString()
+            };
+
+            try {
+                const resposta = await fetch('../Humanity-s-Edge/datos.json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dades)
+                });
+
+                if (resposta.ok) {
+                    alert('Missatge enviat correctament!');
+                    formulari.reset();
+                } else {
+                    throw new Error('Error al servidor');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('No s\'ha pogut guardar el missatge. Recorda que necessites un servidor actiu.');
+            }
+        });
+    });
+}
