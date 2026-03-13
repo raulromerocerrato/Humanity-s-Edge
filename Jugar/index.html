@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../GuiaEstilosCSS/style.css">
+    <link rel="stylesheet" href="/GuiaEstilosCSS/style.css">
     <link rel="stylesheet" href="../css/jugar.css">
     <title>Jugar | Humanity's Edge</title>
 </head>
@@ -24,8 +24,29 @@
             <a href="../Contacte/index.html">Contacte</a>
         </section>
     </header>
+    <hr>
+
+    <main>
+        <section class="mainJugar">
+            <h1>Benvingut a Humanity's Edge!</h1>
+            <p>Premeu el botó per començar a jugar</p>
+            <button onclick="redireccioPagina('jugar')">JUGAR</button>
+        </section>
+
+        <section class="zonaInfo">
+            <p>Apren sobre els controls del joc</p>
+            <button onclick="redireccioPagina('controls')">Controls</button>
+        </section>
+
+        <section class="zonaInfo">
+            <p>Revisa la teva posició en el ranking</p>
+            <button onclick="redireccioPagina('puntuacio')">Puntuació</button>
+        </section>
+
+    </main>
+
+
     <hr> 
-        
         <footer>
             <section class="logoFooter">
                 <img src="../IMG/logoPrueba.png" alt="Imatge Logo" class="tamañologoFooter">
@@ -45,5 +66,7 @@
                 </nav>
             </section>
         </footer>
+
+        <script src="../js/jugar.js"></script>
     </body>
 </html>
