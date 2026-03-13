@@ -1,0 +1,84 @@
+:root{
+    --color-fondo-oscuro: rgb(92, 92, 92);
+    --color-fondo-claro: white;
+    --color-boton-oscuro: red; 
+    --color-boton-claro: blue; 
+    --color-letras-radiactivo: #01ed36;
+    --color-radiactivo-oscuro: #026417;
+    --color-fondo-tabla: #548644;
+}
+
+.contenidorTaula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nomTaula{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-letras-radiactivo);
+}
+.fondoTaula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.taula{
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    list-style: none;
+}
+
+.taula li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li .contingut{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+li .usuaris{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.contingut p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 0px;
+    background-color: var(--color-letras-radiactivo);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.usuaris p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 0px;
+    font-size: 15px;
+}
+
+
