@@ -12,7 +12,7 @@
 </body>
     <header>
         <section class="logoHeader">
-            <img src="../IMG/logoPrueba.png" alt="Logo" class="tamañologoHeader">
+            <img src="../IMG/logo.png" alt="Logo" class="tamañologoHeader">
         </section>
         <section class="barraNavegacio">
             <a href="../index.html">Inici</a>
@@ -23,25 +23,28 @@
             <a href="../Nosaltres/index.html">Nosaltres</a>
             <a href="../Contacte/index.html">Contacte</a>
         </section>
+        <button class="botonMenu" onclick="mostrarBarraNavegacio()">☰</button>
     </header>
     <hr> 
-    <div class="contacte">
-        <h1>Contacta amb nosaltres</h1>
-        <p>Si tens alguna pregunta, suggeriment o simplement vols posar-te en contacte amb nosaltres, no dubtis a enviar-nos un missatge</p>
-        <form class="formulariContacte"></form>
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="missatge">Missatge:</label>
-            <textarea id="missatge" name="missatge" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+    <section class="contenidorContacte">
+        <div class="contacte">
+            <h1>Contacta amb nosaltres</h1>
+            <p>Si tens alguna pregunta, suggeriment o simplement vols posar-te en contacte amb nosaltres, no dubtis a enviar-nos un missatge</p>
+            <form class="formulariContacte">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="missatge">Missatge:</label>
+                <textarea id="missatge" name="missatge" required></textarea>
+                <button type="submit" class="botoEnviar" onclick="afegirMissatge(event)"><b>Enviar</b></button>
+            </form>
+        </div>
+    </section>
     <hr> 
     <footer>
         <section class="logoFooter">
-            <img src="../IMG/logoPrueba.png" alt="Imatge Logo" class="tamañologoFooter">
+            <img src="../IMG/logo.png" alt="Imatge Logo" class="tamañologoFooter">
         </section>
         <section class="enllaçInteres">
             <a href="webjam.com">Web Jam</a>
@@ -58,5 +61,6 @@
             </nav>
         </section>
     </footer>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

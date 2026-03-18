@@ -3,14 +3,26 @@
     --color-fondo-claro: white;
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
+    --color-letras-radiactivo: #55FF72;
+    --color-radiactivo-oscuro: #077d43;
     --color-letras-radiactivo: #01ed36;
-    --color-radiactivo-oscuro: #026417;
     --color-texto: white;
     --color-fondo-tabla: #548644;
 }
 
+@font-face {
+    font-family: 'WaterSplash';
+    src: url(../water_splash/Water_Splash/WaterSplash.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    scrollbar-color: var(--color-letras-radiactivo) black;
+}
+
 body{
-    font-family: Arial;
+    font-family: 'WaterSplash', cursive;
     background-color: var(--color-fondo-oscuro);
     margin: 0;
 }
@@ -26,8 +38,7 @@ header{
 
 
 .tamañologoHeader{
-    width: 200px;
-    height: 40px;
+    width: 50px;
 }
 
 
@@ -38,7 +49,6 @@ header{
 .barraNavegacio a{
     color: var(--color-letras-radiactivo);
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
     padding: 25px 40px;
     transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
@@ -47,19 +57,28 @@ header{
 .barraNavegacio a:hover{
     background-color: var(--color-letras-radiactivo);
     color: black;
-    font-weight: bold;
+}
+
+.botonMenu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    color: var(--color-letras-radiactivo);
+    font-size: 24px;
+    cursor: pointer;
 }
 
 hr{
     border: none;
     border-top: 1px solid var(--color-letras-radiactivo);
+    margin: 0px;
 }
 
 footer{
     display: flex;
     gap: 100px;
     justify-content: center;
-    font-weight: bold;
     background-color: var(--color-fondo);
     margin: 30px 0px;
 }
@@ -95,9 +114,40 @@ footer a:hover {
 
 .tamañologoFooter{
     width: 250px;
-    height: 120px;
+    height: 250px;
 }
 .boton{
     background-color: var(--color-boton);
     
+}
+
+@media (max-width: 900px) {
+    footer{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    footer .logoFooter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header{
+        margin: 20px 0px;
+    }
+
+    .barraNavegacio {
+        display: none;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .botonMenu {
+        display: block;
+    }
+
+    .botonMenu:hover {
+        background-color: var(--color-letras-radiactivo);
+        color: black;
+    }
+
 }

@@ -3,12 +3,15 @@
     --color-fondo-claro: white;
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
-    --color-letras-radiactivo: #01ed36;
-    --color-radiactivo-oscuro: #026417;
+    --color-letras-radiactivo: #55FF72;
+    --color-radiactivo-oscuro: #077d43;
 }
 
 .imatgePortada img {
     width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .infoPagines {
@@ -25,6 +28,7 @@
     padding: 20px;
     border-radius: 5px;
     height: 150px;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .infoPagines button h2 {
@@ -42,3 +46,8 @@
     box-shadow:var(--color-letras-radiactivo) 0px 0px 10px;
 }
 
+@media (max-width: 900px) {
+    .infoPagines {
+        grid-template-columns: 1fr;
+    }
+}
