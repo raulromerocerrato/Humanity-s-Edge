@@ -5,6 +5,8 @@
     --color-boton-claro: blue; 
     --color-letras-radiactivo: #01ed36;
     --color-radiactivo-oscuro: #026417;
+    --color-texto: white;
+    --color-fondo-tabla: #548644;
 }
 
 body{
