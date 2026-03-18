@@ -1,0 +1,95 @@
+
+.contenidorTaula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nomTaula{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-letras-radiactivo);
+}
+
+.fondoTaula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.taula{
+    padding: 0px;
+    list-style: none;
+}
+
+.contingut{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.usuaris{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+}
+
+.contingut p{
+    border: 1px solid var(--color-letras-radiactivo);
+    margin: 0px;
+    background-color: var(--color-letras-radiactivo);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.elementUsuari{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-letras-radiactivo);
+    margin: 0px;
+    font-size: 15px;
+    color: var(--color-letras-radiactivo);
+}
+
+.elementDobleUsuari{
+    grid-column: span 2 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-letras-radiactivo);
+    margin: 0px;
+    font-size: 15px;
+    color: var(--color-letras-radiactivo);
+    height: 50px;
+}
+
+.elementContingut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid var(--color-letras-radiactivo);
+    margin: 0px;
+    font-size: 15px;
+    color: var(--color-letras);
+}
+
+.elementDobleContingut{
+    grid-column: span 2 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-letras-radiactivo);
+    margin: 0px;
+    font-size: 15px;
+    color: var(--color-letras);
+}
+
+

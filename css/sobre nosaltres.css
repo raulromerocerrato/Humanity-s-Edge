@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --color-fondo-oscuro: rgb(92, 92, 92);
     --color-fondo-claro: white;
@@ -7,6 +8,8 @@
     --color-radiactivo-oscuro: #077d43;
     --color-texto: white;
 }
+=======
+>>>>>>> Puntuacion
 
 .creador{
     padding: 70px;
