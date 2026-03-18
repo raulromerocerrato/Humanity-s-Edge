@@ -16,9 +16,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: transparent;
     padding: 20px;
-    border-radius: 10px;
 }
 
 .taula{
@@ -44,7 +42,6 @@
     margin: 0px;
     background-color: var(--color-letras-radiactivo);
     font-size: 20px;
-    font-weight: bold;
 }
 
 .elementUsuari{
@@ -93,3 +90,86 @@
 }
 
 
+@media (max-width: 900px) {
+    .contenidorTaula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .nomTaula{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: var(--color-letras-radiactivo);
+    }
+
+    .fondoTaula{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        padding: 20px;
+    }
+
+    .taula{
+        padding: 0px;
+        padding-left: 70px;
+        padding-right: 70px;
+        list-style: none;
+    }
+
+    .contingut{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .usuaris{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .contingut p{
+        border: 1px solid var(--color-letras-radiactivo);
+        margin: 0px;
+        background-color: var(--color-letras-radiactivo);
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .elementUsuari{
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-letras-radiactivo);
+        margin: 0px;
+        color: var(--color-letras-radiactivo);
+    }
+
+    .elementDobleUsuari{
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-letras-radiactivo);
+        margin: 0px;
+    }
+
+    .elementContingut{
+        border: 1px solid var(--color-letras-radiactivo);
+        margin: 0px;
+        color: var(--color-letras);
+    }
+
+    .elementDobleContingut{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-letras-radiactivo);
+        margin: 0px;
+        color: var(--color-letras);
+    }
+}
