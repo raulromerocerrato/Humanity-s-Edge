@@ -9,7 +9,7 @@
 
 .imatgePortada img {
     width: 100%;
-    height: 0%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
