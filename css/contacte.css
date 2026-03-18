@@ -20,12 +20,21 @@
     border-radius: 10px;
     padding: 20px;
 }
+.contacte h1{
+    font-weight: normal;
+}
+.contacte p{
+    font-family: arial;
+    font-weight: bold;
+}
 .formulariContacte {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
+    font-weight: bold;
+    font-family: arial;
 }
 input, textarea{
     border-radius: 5px;
@@ -63,4 +72,13 @@ input::placeholder, textarea::placeholder {
 }
 .botoEnviar:hover {
     background-color: var(--color-radiactivo-oscuro);
+}
+
+@media (max-width: 900px) {
+    .contacte {
+        margin-inline: 10%;
+    }
+    input, textarea, .botoEnviar {
+        width: 100%;
+    }
 }
