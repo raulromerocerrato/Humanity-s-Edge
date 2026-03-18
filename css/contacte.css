@@ -1,8 +1,8 @@
 :root{
     --color-fondo-oscuro: rgb(92, 92, 92);
     --color-fondo-claro: white;
-    --color-radioactivo: #01ed36;
-    --color-radiactivo-oscuro: #00ab25;
+    --color-radioactivo: #55FF72;
+    --color-radiactivo-oscuro: #077d43;
     --color-oscuro: black
 }
 .contacte {
