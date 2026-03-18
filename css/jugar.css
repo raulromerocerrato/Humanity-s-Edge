@@ -80,8 +80,34 @@
 }
 
 @media (max-width: 900px) {
-    .zonaInfo {
-        width: 90%;
+    
+    .mainJugar {
         gap: 20px;
+    }
+
+    .mainJugar h1 {
+        font-size: 28px;
+    }
+
+    .mainJugar p {
+        font-size: 18px;
+    }
+
+    .mainJugar button {
+        padding: 30px 60px;
+        font-size: 18px;
+    }
+
+    
+    .zonaInfo {
+        width: 70%;
+        gap: 20px;
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .zonaInfo button {
+        padding: 15px 30px;
+        font-size: 16px;
     }
 }

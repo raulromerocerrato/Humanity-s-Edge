@@ -77,6 +77,11 @@ function mostrarBarraNavegacio() {
     if (barra.style.display === 'none') {
         barra.style.display = 'flex';
         barra.style.flexDirection = 'column';
+        barra.style.position = 'absolute';
+        barra.style.background = 'var(--color-fondo-oscuro)';
+        barra.style.top = '80px';
+        barra.style.width = '100%';
+        barra.style.textAlign = 'center';
     } else {
         barra.style.display = 'none';
     }
