@@ -7,6 +7,10 @@
     --color-radiactivo-oscuro: #026417;
 }
 
+html{
+    scrollbar-color: var(--color-letras-radiactivo) black;
+}
+
 body{
     font-family: Arial;
     background-color: var(--color-fondo-oscuro);
