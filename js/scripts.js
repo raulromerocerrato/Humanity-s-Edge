@@ -18,22 +18,22 @@ function redireccioPagina(pagina) {
 function navPagina(nomPagina){
     switch(nomPagina){
         case "Historia":
-            window.location.href='../Historia/index.html';
+            window.location.href="/HUMANITY-S-EDGE/Historia/index.html";
             break;
         case "Jugar":
-            window.location.href='../Jugar/index.html';
+            window.location.href='/HUMANITY-S-EDGE/Jugar/index.html';
             break;
         case "Controls":
-            window.location.href='../Controls/index.html';
+            window.location.href='/HUMANITY-S-EDGE/Controls/index.html';
             break;
         case "Puntuacio":
-            window.location.href='../Puntuacio/index.html';
+            window.location.href='/HUMANITY-S-EDGE/Puntuacio/index.html';
             break;
         case "Nosaltres":  
-            window.location.href='../Nosaltres/index.html';
+            window.location.href='/HUMANITY-S-EDGE/Nosaltres/index.html';
             break;
         case "Contacte":
-            window.location.href='../Contacte/index.html';
+            window.location.href='/HUMANITY-S-EDGE/Contacte/index.html';
             break;
     }
 }
