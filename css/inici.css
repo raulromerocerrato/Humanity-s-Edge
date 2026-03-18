@@ -8,8 +8,8 @@
 }
 
 .imatgePortada img {
-    width: 70%;
-    height: 30%;
+    width: 100%;
+    height: 0%;
     display: block;
     margin: 0 auto;
 }
