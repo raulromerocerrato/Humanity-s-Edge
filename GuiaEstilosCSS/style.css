@@ -7,12 +7,19 @@
     --color-radiactivo-oscuro: #026417;
 }
 
+@font-face {
+    font-family: 'WaterSplash';
+    src: url(../water_splash/Water_Splash/WaterSplash.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html{
     scrollbar-color: var(--color-letras-radiactivo) black;
 }
 
 body{
-    font-family: Arial;
+    font-family: 'WaterSplash', cursive;
     background-color: var(--color-fondo-oscuro);
     margin: 0;
 }
@@ -39,7 +46,6 @@ header{
 .barraNavegacio a{
     color: var(--color-letras-radiactivo);
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
     padding: 25px 40px;
     transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
@@ -48,7 +54,6 @@ header{
 .barraNavegacio a:hover{
     background-color: var(--color-letras-radiactivo);
     color: black;
-    font-weight: bold;
 }
 
 .botonMenu{
@@ -71,7 +76,6 @@ footer{
     display: flex;
     gap: 100px;
     justify-content: center;
-    font-weight: bold;
     background-color: var(--color-fondo);
     margin: 30px 0px;
 }
