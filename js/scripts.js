@@ -70,3 +70,14 @@ function afegirMissatge(e) {
         alert('No s\'ha pogut guardar el missatge. Recorda que necessites un servidor actiu.');
     });
 }
+
+function mostrarBarraNavegacio() {
+    const barra = document.querySelector('.barraNavegacio');
+    
+    if (barra.style.display === 'none') {
+        barra.style.display = 'flex';
+        barra.style.flexDirection = 'column';
+    } else {
+        barra.style.display = 'none';
+    }
+}
