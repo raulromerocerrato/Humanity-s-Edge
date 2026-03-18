@@ -18,22 +18,22 @@ function redireccioPagina(pagina) {
 function navPagina(nomPagina){
     switch(nomPagina){
         case "Historia":
-            window.location.href="/HUMANITY-S-EDGE/Historia/index.html";
+            window.location.href="file:///home/alumne/Documents/Llenguatge%20de%20Marques/WEB%20GAME%20JAM/Humanity-s-Edge/Historia/index.html";
             break;
         case "Jugar":
-            window.location.href='/HUMANITY-S-EDGE/Jugar/index.html';
+            window.location.href="file:///home/alumne/Documents/Llenguatge%20de%20Marques/WEB%20GAME%20JAM/Humanity-s-Edge/Jugar/index.html";
             break;
         case "Controls":
-            window.location.href='/HUMANITY-S-EDGE/Controls/index.html';
+            window.location.href="file:///home/alumne/Documents/Llenguatge%20de%20Marques/WEB%20GAME%20JAM/Humanity-s-Edge/Controls/index.html";
             break;
         case "Puntuacio":
-            window.location.href='/HUMANITY-S-EDGE/Puntuacio/index.html';
+            window.location.href="file:///home/alumne/Documents/Llenguatge%20de%20Marques/WEB%20GAME%20JAM/Humanity-s-Edge/Puntuacio/index.html";
             break;
         case "Nosaltres":  
-            window.location.href='/HUMANITY-S-EDGE/Nosaltres/index.html';
+            window.location.href="file:///home/alumne/Documents/Llenguatge%20de%20Marques/WEB%20GAME%20JAM/Humanity-s-Edge/Nosaltres/index.html";
             break;
         case "Contacte":
-            window.location.href='/HUMANITY-S-EDGE/Contacte/index.html';
+            window.location.href="file:///home/alumne/Documents/Llenguatge%20de%20Marques/WEB%20GAME%20JAM/Humanity-s-Edge/Contacte/index.html";
             break;
     }
 }
