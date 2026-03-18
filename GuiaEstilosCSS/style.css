@@ -3,9 +3,11 @@
     --color-fondo-claro: white;
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
-<<<<<<< HEAD
     --color-letras-radiactivo: #55FF72;
     --color-radiactivo-oscuro: #077d43;
+    --color-letras-radiactivo: #01ed36;
+    --color-texto: white;
+    --color-fondo-tabla: #548644;
 }
 
 @font-face {
@@ -17,12 +19,6 @@
 
 html{
     scrollbar-color: var(--color-letras-radiactivo) black;
-=======
-    --color-letras-radiactivo: #01ed36;
-    --color-radiactivo-oscuro: #026417;
-    --color-texto: white;
-    --color-fondo-tabla: #548644;
->>>>>>> Puntuacion
 }
 
 body{
