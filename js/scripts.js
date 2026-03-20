@@ -87,3 +87,88 @@ function mostrarBarraNavegacio() {
         barra.style.textAlign = 'center';
     }
 }
+
+
+// pagina puntuació 
+
+const url ="https://phpstack-1076337-5399863.cloudwaysapps.com/";
+const ApiToken ="pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+
+const tempsActualizacio = 5000;
+
+const MEDALLES = {
+    1: "🥇",
+    2: "🥈",
+    3: "🥉"
+};
+
+async function carregarPuntuacions() {
+    try {
+
+        const resposta = await fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS");
+
+        if (!resposta.ok) {
+            throw new Error(`Error HTTP: ${resposta.status}`);
+        }
+
+        const respJson = await resposta.json();
+        const dades = respJson.data;
+
+        dades.sort((a, b) => b.puntuacion - a.puntuacion);
+
+        actualitzarTaula(dades);
+
+    } catch (error) {
+        console.error("Error en carregar les puntuacions:", error);
+        mostrarError();
+    }
+}
+
+function actualitzarTaula(jugadors) {
+    const taula = document.querySelector(".taula");
+
+    const capcalera = taula.querySelector(".contingut");
+    taula.innerHTML = "";
+    taula.appendChild(capcalera);
+
+    jugadors.forEach((jugador, index) => {
+        const posicio = index + 1;
+        const medalla = MEDALLES[posicio] || "";
+
+        const fila = document.createElement("li");
+        fila.classList.add("usuaris");
+
+        if (posicio <= 3) {
+            fila.classList.add(`posicio-${posicio}`);
+        }
+
+        fila.innerHTML = `
+            <p class="elementUsuari">${medalla} ${posicio}</p>
+            <p class="elementDobleUsuari">${jugador.name}</p>
+            <p class="elementUsuari">${jugador.puntuacion}</p>
+        `;
+
+        taula.appendChild(fila);
+    });
+}
+
+function mostrarError() {
+    const taula = document.querySelector(".taula");
+    const capcalera = taula.querySelector(".contingut");
+    taula.innerHTML = "";
+    taula.appendChild(capcalera);
+
+    const filaError = document.createElement("li");
+    filaError.classList.add("usuaris");
+    filaError.innerHTML = `
+        <p class="elementDobleUsuari" style="grid-column: span 4; color: red;">
+            Error en carregar les puntuacions. Torna-ho a intentar.
+        </p>
+    `;
+    taula.appendChild(filaError);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    carregarPuntuacions();
+    setInterval(carregarPuntuacions, tempsActualizacio);
+});
