@@ -74,15 +74,16 @@ function afegirMissatge(e) {
 function mostrarBarraNavegacio() {
     const barra = document.querySelector('.barraNavegacio');
     
-    if (barra.style.display === 'none') {
+    if (barra.style.display === 'flex') {
+        barra.style.display = 'none';
+    } else {
         barra.style.display = 'flex';
         barra.style.flexDirection = 'column';
         barra.style.position = 'absolute';
         barra.style.background = 'var(--color-fondo-oscuro)';
-        barra.style.top = '80px';
+        barra.style.top = '60px';
+        barra.style.left = '0';
         barra.style.width = '100%';
         barra.style.textAlign = 'center';
-    } else {
-        barra.style.display = 'none';
     }
 }
