@@ -83,7 +83,12 @@ footer{
     gap: 100px;
     justify-content: center;
     background-color: var(--color-fondo);
+<<<<<<< HEAD
     margin: 30px 0px;
+=======
+    padding-top: 20px;
+    border-top: var(--color-letras-radiactivo) 2px solid;
+>>>>>>> Pagina-Controls
 }
 
 .enllaçInteres{
