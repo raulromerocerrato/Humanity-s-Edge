@@ -8,6 +8,10 @@
     --color-radiactivo-oscuro: #077d43;
 }
 
+main{
+    margin-top: 3%;
+}
+
 .mainJugar{
     align-items: center;
     justify-content: center;

@@ -11,6 +11,10 @@
     color: var(--color-letras-radiactivo);
 }
 
+main{
+    margin-top: 3%;
+}
+
 .fondoTaula{
     display: flex;
     justify-content: center;

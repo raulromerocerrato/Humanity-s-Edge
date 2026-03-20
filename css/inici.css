@@ -1,10 +1,13 @@
 :root{
-    --color-fondo-oscuro: rgb(92, 92, 92);
+    --color-fondo-oscuro: #868686;
     --color-fondo-claro: white;
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
     --color-letras-radiactivo: #55FF72;
     --color-radiactivo-oscuro: #077d43;
+}
+main{
+    margin-top: 3%;
 }
 
 .imatgePortada img {

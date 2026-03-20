@@ -1,5 +1,5 @@
 :root{
-    --color-fondo-oscuro: rgb(92, 92, 92);
+    --color-fondo-oscuro: #868686;
     --color-fondo-claro: white;
     --color-boton-oscuro: red; 
     --color-boton-claro: blue; 
@@ -32,10 +32,13 @@ header{
     align-items: center;
     margin: 0;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
     gap: 100px;
+    border-bottom: #01ed36 2px solid;
     background-color: var(--color-fondo-oscuro);
 }
-
 
 .tamañologoHeader{
     width: 50px;
