@@ -52,6 +52,8 @@
     margin: 0px;
     font-size: 15px;
     color: var(--color-letras-radiactivo);
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .elementDobleUsuari{
@@ -64,6 +66,8 @@
     font-size: 15px;
     color: var(--color-letras-radiactivo);
     height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .elementContingut{
@@ -147,6 +151,7 @@
         border: 1px solid var(--color-letras-radiactivo);
         margin: 0px;
         color: var(--color-letras-radiactivo);
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .elementDobleUsuari{
@@ -156,6 +161,7 @@
         justify-content: center;
         border: 1px solid var(--color-letras-radiactivo);
         margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .elementContingut{
