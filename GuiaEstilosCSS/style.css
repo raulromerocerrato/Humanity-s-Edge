@@ -80,7 +80,9 @@ footer{
     gap: 100px;
     justify-content: center;
     background-color: var(--color-fondo);
-    margin: 30px 0px;
+    padding-top: 20px;
+    margin: 20px 0px;
+    border-top: var(--color-letras-radiactivo) 2px solid;
 }
 
 .enllaçInteres{
