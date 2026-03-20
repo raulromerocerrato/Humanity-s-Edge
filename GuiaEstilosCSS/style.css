@@ -144,10 +144,4 @@ footer a:hover {
     .botonMenu {
         display: block;
     }
-
-    .botonMenu:hover {
-        background-color: var(--color-letras-radiactivo);
-        color: black;
-    }
-
 }
