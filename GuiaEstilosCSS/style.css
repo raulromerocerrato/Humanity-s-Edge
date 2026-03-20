@@ -5,7 +5,7 @@
     --color-boton-claro: blue; 
     --color-letras-radiactivo: #55FF72;
     --color-radiactivo-oscuro: #077d43;
-    --color-letras-radiactivo: #077d43;
+    --color-letras-radiactivo: #01ed36;
     --color-texto: white;
     --color-fondo-tabla: #548644;
 }
@@ -83,9 +83,7 @@ footer{
     gap: 100px;
     justify-content: center;
     background-color: var(--color-fondo);
-    padding-top: 20px;
-    margin: 20px 0px;
-    border-top: var(--color-letras-radiactivo) 2px solid;
+    margin: 30px 0px;
 }
 
 .enllaçInteres{
