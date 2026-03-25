@@ -42,7 +42,7 @@ input, textarea{
     border-radius: 5px;
 }
 input, textarea {
-    background-color: var(--color-fondo-oscuro);
+    background-color: #555;
     color: var(--color-fondo-claro);   
     border: 1px solid #555;  
     padding: 5px;
