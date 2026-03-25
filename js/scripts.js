@@ -175,3 +175,24 @@ document.addEventListener("DOMContentLoaded", function() {
     cargarPuntuaciones();
     setInterval(cargarPuntuaciones, tiempoActualizacion);
 });
+
+
+
+// Cambiar modo colores
+document.addEventListener('DOMContentLoaded', () => {
+    const botonModo = document.querySelector('.botonCambiarModoClaro');
+
+    if (localStorage.getItem('modo') === 'claro') {
+        document.body.classList.add('modo-claro');
+        botonModo.textContent = '🌙';
+    } else {
+        botonModo.textContent = '☀️';
+    }
+
+    botonModo.addEventListener('click', () => {
+        document.body.classList.toggle('modo-claro');
+        const esModoClaro = document.body.classList.contains('modo-claro');
+        botonModo.textContent = esModoClaro ? '🌙' : '☀️';
+        localStorage.setItem('modo', esModoClaro ? 'claro' : 'oscuro');
+    });
+});

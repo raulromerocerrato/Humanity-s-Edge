@@ -65,7 +65,26 @@ header{
     color: black;
 }
 
+.botonCambiarModoClaro{
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid var(--color-letras-radiactivo);
+    color: var(--color-letras-radiactivo);
+    font-weight: bold;
 
+}
+
+.botonCambiarModoClaro button:hover{
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-letras-radiactivo);
+    border: 2px solid var(--color-letras-radiactivo);
+    color: var(--color-fondo-oscuro);
+    font-weight: bold;
+}
 
 .botonMenu{
     display: none;
@@ -129,6 +148,32 @@ footer a:hover {
 .boton{
     background-color: var(--color-boton);
     
+}
+
+/* Modo claro */
+body.modo-claro {
+    --color-fondo-oscuro: #f0f5f0;
+    --color-letras-radiactivo: #077d43;
+    --color-texto: #081409;
+    background-color: var(--color-fondo-oscuro);
+}
+
+body.modo-claro header {
+    background-color: var(--color-fondo-oscuro);
+    border-bottom-color: var(--color-letras-radiactivo);
+}
+
+body.modo-claro footer {
+    background-color: var(--color-fondo-oscuro);
+}
+
+body.modo-claro .barraNavegacio a {
+    color: var(--color-letras-radiactivo);
+}
+
+body.modo-claro .botonCambiarModoClaro {
+    border-color: var(--color-letras-radiactivo);
+    color: var(--color-letras-radiactivo);
 }
 
 @media (max-width: 900px) {
