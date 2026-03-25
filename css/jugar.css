@@ -1,40 +1,47 @@
-:root{
-    --color-fondo-claro: white;
-
-    --color-boton-oscuro: red; 
-    --color-boton-claro: blue; 
-    --color-letras-radiactivo: #55FF72;
-    --color-radiactivo-oscuro: #077d43;
+body {
+    margin: 0px;
+    padding: 0px;
 }
-
+ 
 main{
     margin-top: 4%;
     background-image: url(../IMG/PersonatgeMans.png);
     background-size: cover;
     background-position: center;
     padding: 0px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+ 
 .mainJugar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 80px 5%;
+    gap: 40px;
+}
+ 
+.mainJugar-text {
     display: flex;
     flex-direction: column;
 }
-
+ 
 .mainJugar h1{
     color: var(--color-letras-radiactivo);
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: bold;
 }
-
+ 
 .mainJugar p{
     color: var(--color-letras-radiactivo);
     font-size: 24px;
     margin-bottom: 30px;
 }
-
+ 
 .mainJugar button {
     background-color: rgba(0, 0, 0, 0.7);
     font-family: 'WaterSplash', cursive;
@@ -46,26 +53,32 @@ main{
     font-weight: bold;
     cursor: pointer;
 }
-
+ 
 .mainJugar button:hover {
     transform: scale(1.1);
     background-color: black;
     box-shadow: 0 0 50px var(--color-letras-radiactivo);
 }
 
-.zonaInfo{
-    margin: 20px auto;
+.zonesInfo-container {
     display: flex;
-    gap: 50px;;
-    color:  white;
-    width: 50%;
+    flex-direction: row;
+}
+ 
+.zonaInfo{
+    flex: 1;
+    display: flex;
+    gap: 50px;
+    color: white;
     font-size: 24px;
     background-color: var(--color-gris-fuerte);
-    border-radius: 10px;
-    padding: 30px 0px;
-    justify-content: center;
+    border-top: 1px solid rgba(85, 255, 114, 0.3);
+    padding: 30px 40px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+ 
 .zonaInfo button {
     background-color: black;
     padding: 20px 40px;
@@ -77,39 +90,49 @@ main{
     cursor: pointer;
     transition: transform 0.7s ease, box-shadow 0.3s ease;
 }
-
+ 
 .zonaInfo button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px var(--color-letras-radiactivo);
 }
-
+ 
 @media (max-width: 900px) {
     
     .mainJugar {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 6%;
         gap: 20px;
     }
-
+ 
     .mainJugar h1 {
         font-size: 28px;
     }
-
+ 
     .mainJugar p {
         font-size: 18px;
     }
-
+ 
     .mainJugar button {
         padding: 30px 60px;
         font-size: 18px;
     }
-
-    
+ 
+    .zonesInfo-container {
+        flex-direction: column;
+    }
+ 
     .zonaInfo {
-        width: 70%;
         gap: 20px;
         font-size: 18px;
         padding: 20px;
     }
-
+ 
+    .zonaInfo:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(85, 255, 114, 0.2);
+    }
+ 
     .zonaInfo button {
         padding: 15px 30px;
         font-size: 16px;
