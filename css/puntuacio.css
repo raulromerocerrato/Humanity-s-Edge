@@ -167,7 +167,9 @@ main{
     }
 
     .elementUsuari{
+        text-align: center;
         width: 100px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -178,7 +180,9 @@ main{
     }
 
     .elementDobleUsuari{
+        text-align: center;
         width: 100px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
