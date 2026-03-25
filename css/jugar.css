@@ -43,13 +43,14 @@ main{
 }
  
 .mainJugar button {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     font-family: 'WaterSplash', cursive;
     padding: 50px 100px;
     color: var(--color-letras-radiactivo);
     border-radius: 5px;
     transition: transform 0.7s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     font-size: 24px;
+    border-color: var(--color-letras-radiactivo);
     font-weight: bold;
     cursor: pointer;
 }
