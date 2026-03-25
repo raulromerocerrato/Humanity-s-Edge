@@ -20,7 +20,7 @@ main{
 }
 
 .infoPagines button {
-    background-color: #1A1A1A;
+    background-color: var(--color-gris-fuerte);
     padding: 20px;
     border-radius: 5px;
     height: 150px;
@@ -32,7 +32,7 @@ main{
     margin-bottom: 10px;
 }
 .infoPagines button p {
-    color: white;
+    color: var(--color-texto);
     font-size: 16px;
     align-items: center;
     justify-content: center;
