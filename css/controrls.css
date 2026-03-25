@@ -9,8 +9,10 @@
 }
 
 main {
-    background-image: url(../IMG/imgPersonage.jpeg);
+    background-image: url(../IMG/fondoPersonajeIA.png);
     background-color: black;
+    background-position: center;
+    margin-top: 4%;
 }
 
 .box-control{
@@ -24,12 +26,16 @@ main {
     border: var(--color-letras-radiactivo) 2px solid;
     border-radius: 10px;
     padding: 0px 30px;
-    background-color: var(--color-fondo-oscuro);
+    background-color: #1A1A1A;
 }
 
 .box-control h1{
     color: var(--color-letras-radiactivo);
     font-size: 50px;
+}
+
+.box-control p {
+    color: white;
 }
 
 .box-control img{
