@@ -57,6 +57,8 @@ main{
     font-size: 15px;
     color: var(--color-letras-radiactivo);
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
 
 }
 
@@ -71,6 +73,8 @@ main{
     color: var(--color-letras-radiactivo);
     height: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
 
 }
 
@@ -95,6 +99,21 @@ main{
     margin: 0px;
     font-size: 15px;
     color: var(--color-letras);
+}
+
+.posicio-1 p {
+    color: var(--color-letras);
+    background: var(--color-primera-posicio)
+}
+
+.posicio-2 p {
+    color: var(--color-letras);
+    background: var(--color-segona-posicio)
+}
+
+.posicio-3 p {
+    color: var(--color-letras);
+    background: var(--color-tercera-posicio)
 }
 
 

@@ -8,6 +8,9 @@
     --color-letras-radiactivo: #01ed36;
     --color-texto: white;
     --color-fondo-tabla: #548644;
+    --color-primera-posicio: linear-gradient(145deg, #ffd700, #ffcc00, #b8860b);
+    --color-segona-posicio: linear-gradient(145deg, #e0e0e0, #c0c0c0, #a9a9a9);
+    --color-tercera-posicio: linear-gradient(145deg, #d2691e, #cd7f32, #8b4513);
 }
 
 @font-face {
