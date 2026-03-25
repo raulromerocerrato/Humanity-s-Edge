@@ -50,7 +50,9 @@ header{
 
 .barraNavegacio{
     display: flex;
+
 }
+
 
 .barraNavegacio a{
     color: var(--color-letras-radiactivo);
