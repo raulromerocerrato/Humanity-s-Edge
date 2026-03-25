@@ -57,6 +57,8 @@ main{
     font-size: 15px;
     color: var(--color-letras-radiactivo);
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
 
 }
 
@@ -71,6 +73,8 @@ main{
     color: var(--color-letras-radiactivo);
     height: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
 
 }
 
@@ -98,15 +102,18 @@ main{
 }
 
 .posicio-1 p {
-    background-color: gold;
+    color: var(--color-letras);
+    background: var(--color-primera-posicio)
 }
 
 .posicio-2 p {
-    background-color: silver;
+    color: var(--color-letras);
+    background: var(--color-segona-posicio)
 }
 
 .posicio-3 p {
-    background-color: #cd7f32;
+    color: var(--color-letras);
+    background: var(--color-tercera-posicio)
 }
 
 
