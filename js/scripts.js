@@ -101,7 +101,7 @@ const tiempoActualizacion = 5000;
 
 async function cargarPuntuaciones() {
     try {
-        const resposta = await fetch(url + "api/classification/" + token);
+        const resposta = await fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS/10");
         const datos = await resposta.json();
 
         if (!resposta.ok) {
