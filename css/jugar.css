@@ -8,7 +8,11 @@
 }
 
 main{
-    margin-top: 3%;
+    margin-top: 4%;
+    background-image: url(../IMG/PersonatgeMans.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
 }
 
 .mainJugar{
@@ -16,7 +20,6 @@ main{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
 }
 
 .mainJugar h1{
@@ -33,11 +36,12 @@ main{
 }
 
 .mainJugar button {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'WaterSplash', cursive;
     padding: 50px 100px;
     color: var(--color-letras-radiactivo);
     border-radius: 5px;
-    transition: transform 0.7s ease, box-shadow 0.3s ease, font-family 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.7s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
@@ -45,8 +49,7 @@ main{
 
 .mainJugar button:hover {
     transform: scale(1.1);
-    color: black;
-    background-color: var(--color-letras-radiactivo);
+    background-color: black;
     box-shadow: 0 0 50px var(--color-letras-radiactivo);
 }
 
@@ -59,10 +62,7 @@ main{
     font-size: 24px;
     background-color: var(--color-gris-fuerte);
     border-radius: 10px;
-    padding: 30px;
-    border-color: var(--color-letras-radiactivo);
-    border-width: 1px;
-    border-style: solid;
+    padding: 30px 0px;
     justify-content: center;
 }
 
@@ -70,6 +70,7 @@ main{
     background-color: black;
     padding: 20px 40px;
     color: var(--color-letras-radiactivo);
+    border-color: var(--color-letras-radiactivo);
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
