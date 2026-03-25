@@ -8,6 +8,7 @@ main{
     height: auto;
     display: block;
     margin: 0 auto;
+    border-bottom: 2px solid var(--color-letras-radiactivo);
 }
 
 .infoPagines {
