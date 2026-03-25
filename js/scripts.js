@@ -44,13 +44,14 @@ function afegirMissatge(e) {
     const formulari = document.querySelector('.formulariContacte');
 
     const dades = {
-        nom: document.getElementById('nom').value,
+        api_token: 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS',
+        nombre: document.getElementById('nom').value,
         email: document.getElementById('email').value,
-        missatge: document.getElementById('missatge').value,
-        data: new Date().toLocaleString()
+        asunto: document.getElementById('asunto')?.value || 'Contacte web',
+        mensaje: document.getElementById('missatge').value
     };
 
-    fetch('../Humanity-s-Edge/datos.json', {
+    fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -62,12 +63,14 @@ function afegirMissatge(e) {
             alert('Missatge enviat correctament!');
             formulari.reset();
         } else {
-            throw new Error('Error al servidor');
+            return resposta.json().then(err => {
+                throw new Error(err.message || 'Error al servidor');
+            });
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('No s\'ha pogut guardar el missatge. Recorda que necessites un servidor actiu.');
+        alert('No s\'ha pogut enviar el missatge: ' + error.message);
     });
 }
 
