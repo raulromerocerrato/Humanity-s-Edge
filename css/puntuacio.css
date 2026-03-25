@@ -97,6 +97,18 @@ main{
     color: var(--color-letras);
 }
 
+.posicio-1 p {
+    background-color: gold;
+}
+
+.posicio-2 p {
+    background-color: silver;
+}
+
+.posicio-3 p {
+    background-color: #cd7f32;
+}
+
 
 @media (max-width: 900px) {
     .contenidorTaula{

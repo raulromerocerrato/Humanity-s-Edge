@@ -94,84 +94,84 @@ function mostrarBarraNavegacio() {
 
 // pagina puntuació 
 
-const url ="https://phpstack-1076337-5399863.cloudwaysapps.com/";
-const ApiToken ="pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/";
+const token = "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
 
-const tempsActualizacio = 5000;
+const tiempoActualizacion = 5000;
 
-const MEDALLES = {
-    1: "🥇",
-    2: "🥈",
-    3: "🥉"
-};
-
-async function carregarPuntuacions() {
+async function cargarPuntuaciones() {
     try {
-
-        const resposta = await fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS");
+        const resposta = await fetch(url + "api/classification/" + token);
+        const datos = await resposta.json();
 
         if (!resposta.ok) {
-            throw new Error(`Error HTTP: ${resposta.status}`);
+            console.log("Error en la respuesta");
+            mostrarError();
+            return;
         }
 
-        const respJson = await resposta.json();
-        const dades = respJson.data;
+        let jugadores = datos.data;
 
-        dades.sort((a, b) => b.puntuacion - a.puntuacion);
+        jugadores.sort(function(a, b) {
+            return b.puntuacion - a.puntuacion;
+        });
 
-        actualitzarTaula(dades);
+        mostrarTabla(jugadores);
 
     } catch (error) {
-        console.error("Error en carregar les puntuacions:", error);
+        console.log("Ha ocurrido un error:", error);
         mostrarError();
     }
 }
 
-function actualitzarTaula(jugadors) {
-    const taula = document.querySelector(".taula");
+function mostrarTabla(lista) {
+    const tabla = document.querySelector(".taula");
+    const cabecera = tabla.querySelector(".contingut");
 
-    const capcalera = taula.querySelector(".contingut");
-    taula.innerHTML = "";
-    taula.appendChild(capcalera);
+    tabla.innerHTML = "";
+    tabla.appendChild(cabecera);
 
-    jugadors.forEach((jugador, index) => {
-        const posicio = index + 1;
-        const medalla = MEDALLES[posicio] || "";
+    for (let i = 0; i < lista.length; i++) {
+        const jugador = lista[i];
+        const posicion = i + 1;
 
         const fila = document.createElement("li");
         fila.classList.add("usuaris");
 
-        if (posicio <= 3) {
-            fila.classList.add(`posicio-${posicio}`);
+        if (posicion <= 3) {
+            fila.classList.add("posicio-" + posicion);
         }
 
         fila.innerHTML = `
-            <p class="elementUsuari">${medalla} ${posicio}</p>
+            <p class="elementUsuari">${posicion}</p>
             <p class="elementDobleUsuari">${jugador.name}</p>
             <p class="elementUsuari">${jugador.puntuacion}</p>
         `;
 
-        taula.appendChild(fila);
-    });
+        tabla.appendChild(fila);
+    }
 }
 
 function mostrarError() {
-    const taula = document.querySelector(".taula");
-    const capcalera = taula.querySelector(".contingut");
-    taula.innerHTML = "";
-    taula.appendChild(capcalera);
+    const tabla = document.querySelector(".taula");
+    const cabecera = tabla.querySelector(".contingut");
 
-    const filaError = document.createElement("li");
-    filaError.classList.add("usuaris");
-    filaError.innerHTML = `
+    tabla.innerHTML = "";
+    tabla.appendChild(cabecera);
+
+    const fila = document.createElement("li");
+    fila.classList.add("usuaris");
+
+    fila.innerHTML = `
         <p class="elementDobleUsuari" style="grid-column: span 4; color: red;">
-            Error en carregar les puntuacions. Torna-ho a intentar.
+            Error al cargar los datos
         </p>
     `;
-    taula.appendChild(filaError);
+
+    tabla.appendChild(fila);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    carregarPuntuacions();
-    setInterval(carregarPuntuacions, tempsActualizacio);
+document.addEventListener("DOMContentLoaded", function() {
+    cargarPuntuaciones();
+    setInterval(cargarPuntuaciones, tiempoActualizacion);
 });
