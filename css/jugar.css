@@ -57,7 +57,7 @@ main{
     color:  white;
     width: 50%;
     font-size: 24px;
-    background-color: var(--color-radiactivo-oscuro);
+    background-color: var(--color-gris-fuerte);
     border-radius: 10px;
     padding: 30px;
     border-color: var(--color-letras-radiactivo);
