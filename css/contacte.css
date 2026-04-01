@@ -6,16 +6,13 @@
     --color-fondo-oscuro: #0a1a0e;
     --glow: 0 0 8px #55FF72, 0 0 20px rgba(85,255,114,0.3);
 }
-main {
-    margin-top: 0;
-}
 .contenidorContacte {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 60px;
-    height: calc(100vh - 75px);
+    height: calc(100vh - var(--header-height, 75px));
     padding: 30px 40px;
     box-sizing: border-box;
     overflow: hidden;
