@@ -74,6 +74,40 @@ function afegirMissatge(e) {
     });
 }
 
+function afegirComentari(e) {
+    e.preventDefault();
+
+    const formulari = document.querySelector('.formulariComentari');
+
+    const dades = {
+        api_token: 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS',
+        nombre: document.getElementById('nom').value,
+        mensaje: document.getElementById('missatge').value
+    };
+
+    fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dades)
+    })
+    .then(resposta => {
+        if (resposta.ok) {
+            alert('Missatge enviat correctament!');
+            formulari.reset();
+        } else {
+            return resposta.json().then(err => {
+                throw new Error(err.message || 'Error al servidor');
+            });
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('No s\'ha pogut enviar el missatge: ' + error.message);
+    });
+}
+
 function mostrarBarraNavegacio() {
     const barra = document.querySelector('.barraNavegacio');
     
