@@ -6,31 +6,23 @@
     --color-fondo-oscuro: #0a1a0e;
     --glow: 0 0 8px #55FF72, 0 0 20px rgba(85,255,114,0.3);
 }
-
-main {
-    margin-top: 0;
-}
-
 .contenidorContacte {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 60px;
-    min-height: calc(100vh - 80px);
+    height: calc(100vh - var(--header-height, 75px));
     padding: 30px 40px;
     box-sizing: border-box;
+    overflow: hidden;
 }
-.contenidorContacte h1{
-    font-size: small;
-}
-
 .imgPersonatge {
     max-height: 75vh;
     width: auto;
+    display: block;
     filter: drop-shadow(0 0 18px rgba(85,255,114,0.35));
 }
-
 .contacte {
     display: flex;
     flex-direction: column;
@@ -46,7 +38,6 @@ main {
     margin: 0;
     position: relative;
 }
-
 .contacte::before,
 .contacte::after {
     content: '';
@@ -64,7 +55,6 @@ main {
     bottom: -1px; right: -1px;
     border-width: 0 2px 2px 0;
 }
-
 .contacte h1 {
     font-size: 1.6rem;
     font-weight: bold;
@@ -74,7 +64,6 @@ main {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
 .contacte p {
     font-family: Arial, sans-serif;
     font-size: 0.82rem;
@@ -82,7 +71,6 @@ main {
     line-height: 1.5;
     margin-bottom: 22px;
 }
-
 .formulariContacte {
     display: flex;
     flex-direction: column;
@@ -91,16 +79,13 @@ main {
     font-family: Arial, sans-serif;
     text-align: left;
 }
-
 .formulariContacte label {
     font-size: 0.75rem;
     font-weight: bold;
     color: var(--color-radioactivo);
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-top: 8px;
 }
-
 input, textarea {
     background-color: #0d1f10;
     color: var(--color-fondo-claro);
@@ -113,22 +98,17 @@ input, textarea {
     font-size: 0.9rem;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--color-radioactivo);
     box-shadow: 0 0 6px rgba(85,255,114,0.4);
 }
-
 textarea {
     height: 110px;
-    resize: none;
 }
-
 input::placeholder, textarea::placeholder {
     color: #3a6b44;
 }
-
 .botoEnviar {
     background-color: transparent;
     color: var(--color-radioactivo);
@@ -136,22 +116,18 @@ input::placeholder, textarea::placeholder {
     padding: 11px 20px;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 0.9rem;
     font-weight: bold;
     font-family: Arial, sans-serif;
     letter-spacing: 2px;
-    text-transform: uppercase;
     width: 100%;
     margin-top: 14px;
     transition: background-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
 }
-
 .botoEnviar:hover {
     background-color: var(--color-radioactivo);
     color: var(--color-oscuro);
     box-shadow: var(--glow);
 }
-
 @media (max-width: 900px) {
     .contenidorContacte {
         flex-direction: column;
@@ -159,11 +135,9 @@ input::placeholder, textarea::placeholder {
         padding: 20px;
         min-height: auto;
     }
-
     .imgPersonatge {
         max-height: 35vh;
     }
-
     .contacte {
         padding: 24px 20px;
     }
