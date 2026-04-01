@@ -41,6 +41,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    height: var(--header-height);
     gap: 100px;
     border-bottom: #01ed36 2px solid;
     background-color: var(--color-fondo-oscuro);
@@ -48,6 +49,9 @@ header{
     box-sizing: border-box;
 }
 
+main {
+    padding-top: var(--header-height);
+}
 
 .tamañologoHeader{
     width: 50px;
