@@ -12,43 +12,130 @@ main{
 }
 
 .infoPagines {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+    text-align: left;
+}
+ 
+/* Each article is a card */
+.infoPagines article {
+    background-color: var(--color-gris-fuerte);
+    border-radius: 12px;
+    padding: 32px 28px;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-.infoPagines article {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+ 
+.infoPagines article::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: border-color 0.25s ease;
+    pointer-events: none;
 }
-
-.infoPagines button {
-    background-color: var(--color-letras-radiactivo);
-    padding: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'WaterSplash', cursive;
+ 
+.infoPagines article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 28px color-mix(in srgb, var(--color-letras-radiactivo) 35%, transparent);
 }
+ 
+.infoPagines article:hover::before {
+    border-color: var(--color-letras-radiactivo);
+}
+ 
+/* Jugar article - featured, spans 2 rows */
+.infoPagines article:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    justify-content: flex-end;
+    background: linear-gradient(
+        160deg,
+        color-mix(in srgb, var(--color-letras-radiactivo) 10%, var(--color-gris-fuerte)) 0%,
+        var(--color-gris-fuerte) 60%
+    );
+}
+ 
+.infoPagines article:nth-child(2)::after {
+    content: '⚔️';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    font-size: 52px;
+    line-height: 1;
+    opacity: 0.9;
+}
+ 
+/* h2 titles */
 .infoPagines article h2 {
     color: var(--color-letras-radiactivo);
-    font-size: 40px;
+    font-size: 26px;
     font-weight: normal;
+    font-family: 'WaterSplash', cursive;
+    margin: 0;
+    line-height: 1.1;
 }
+ 
+.infoPagines article:nth-child(2) h2 {
+    font-size: 40px;
+    margin-top: 80px;
+}
+ 
+/* Paragraphs */
 .infoPagines article p {
     color: var(--color-texto);
-    font-size: 16px;
-    align-items: center;
-    justify-content: center;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.85;
+    flex-grow: 1;
 }
-.infoPagines button:hover {
-    transform: scale(1.01);
-    box-shadow:var(--color-letras-radiactivo) 0px 0px 10px;
+ 
+/* Buttons */
+.infoPagines article button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--color-letras-radiactivo);
+    color: var(--color-letras-radiactivo);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'WaterSplash', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    width: fit-content;
+    height: auto;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
+}
+ 
+/* Featured article button - filled */
+.infoPagines article:nth-child(2) button {
+    background: var(--color-letras-radiactivo);
+    color: var(--color-gris-fuerte);
+    border-color: var(--color-letras-radiactivo);
+}
+ 
+.infoPagines article button:hover {
+    background: var(--color-letras-radiactivo);
+    color: var(--color-gris-fuerte);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--color-letras-radiactivo) 50%, transparent);
+}
+ 
+.infoPagines article:nth-child(2) button:hover {
+    opacity: 0.85;
 }
 
 @media (max-width: 900px) {
