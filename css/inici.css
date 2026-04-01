@@ -12,34 +12,42 @@ main{
 }
 
 .infoPagines {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     align-items: center;
     text-align: center;
     padding: 20px;
 }
 
+.infoPagines article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
 .infoPagines button {
-    background-color: var(--color-gris-fuerte);
+    background-color: var(--color-letras-radiactivo);
     padding: 20px;
     border-radius: 5px;
-    height: 150px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'WaterSplash', cursive;
 }
-.infoPagines button h2 {
+.infoPagines article h2 {
     color: var(--color-letras-radiactivo);
-    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: normal;
 }
-.infoPagines button p {
+.infoPagines article p {
     color: var(--color-texto);
     font-size: 16px;
     align-items: center;
     justify-content: center;
 }
 .infoPagines button:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     box-shadow:var(--color-letras-radiactivo) 0px 0px 10px;
 }
 
