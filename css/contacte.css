@@ -135,8 +135,11 @@ input::placeholder, textarea::placeholder {
         padding: 20px;
         min-height: auto;
     }
+    .imgJeringuilla {
+        display: none;
+    }
     .imgPersonatge {
-        max-height: 35vh;
+        display: none;
     }
     .contacte {
         padding: 24px 20px;
