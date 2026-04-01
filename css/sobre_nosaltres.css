@@ -6,10 +6,9 @@ main {
     padding: 60px 32px 100px;
 }
  
-/* ── titol ── */
 .titol {
     padding: 60px 0 80px;
-    border-bottom: 1px solid color-mix(in srgb, var(--color-letras-radiactivo) 25%, transparent);
+    border-bottom: 1px solid var(--color-letras-radiactivo);
     margin-bottom: 80px;
 }
  
@@ -68,8 +67,7 @@ main {
     margin: 0;
     opacity: 0.8;
 }
- 
-/* ── EQUIP — grid 2x2 ── */
+
 .equip-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -89,8 +87,8 @@ main {
  
 .membre:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 24px color-mix(in srgb, var(--color-letras-radiactivo) 25%, transparent);
-    border-color: color-mix(in srgb, var(--color-letras-radiactivo) 35%, transparent);
+    box-shadow: 0 0 24px var(--color-letras-radiactivo);
+    border-color: var(--color-letras-radiactivo);
 }
  
 .avatar {
@@ -134,26 +132,15 @@ main {
     margin: 0;
 }
  
-/* ── jugar FINAL ── */
 .jugar {
     text-align: center;
     padding: 80px 40px;
     border-radius: 16px;
     background: var(--color-gris-fuerte);
-    border: 1px solid color-mix(in srgb, var(--color-letras-radiactivo) 30%, transparent);
+    border: 1px solid var(--color-letras-radiactivo);
     position: relative;
     overflow: hidden;
     margin-top: 80px;
-}
- 
-.jugar::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 100%,
-        color-mix(in srgb, var(--color-letras-radiactivo) 10%, transparent),
-        transparent 70%);
-    pointer-events: none;
 }
  
 .jugar h2 {
@@ -182,7 +169,7 @@ main {
 .jugar a:hover {
     opacity: 0.88;
     transform: translateY(-2px);
-    box-shadow: 0 0 24px color-mix(in srgb, var(--color-letras-radiactivo) 50%, transparent);
+    box-shadow: 0 0 24px var(--color-letras-radiactivo);
 }
  
 /* ── RESPONSIVE ── */
