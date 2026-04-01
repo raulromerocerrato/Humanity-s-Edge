@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', () => {
     const botonModo = document.querySelector('.botonCambiarModoClaro');
 
-    if (localStorage.getItem('modo') === 'claro') {
+    if (localStorage.getItem('modo') === 'light') {
         document.body.classList.add('modo-claro');
         botonModo.textContent = '🌙';
     } else {
@@ -190,9 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     botonModo.addEventListener('click', () => {
-        document.body.classList.toggle('modo-claro');
-        const esModoClaro = document.body.classList.contains('modo-claro');
+        document.body.classList.toggle('light');
+        const esModoClaro = document.body.classList.contains('light');
         botonModo.textContent = esModoClaro ? '🌙' : '☀️';
-        localStorage.setItem('modo', esModoClaro ? 'claro' : 'oscuro');
+        localStorage.setItem('modo', esModoClaro ? 'light' : 'dark');
     });
 });
