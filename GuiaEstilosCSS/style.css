@@ -75,7 +75,6 @@ header{
     border: 2px solid var(--color-letras-radiactivo);
     color: var(--color-letras-radiactivo);
     font-weight: bold;
-
 }
 
 .botonCambiarModoClaro button:hover{
@@ -166,7 +165,13 @@ body.light {
 
 body.light header {
     background-color: var(--color-fondo-claro);
-    border-bottom-color: var(--color-amarillo);
+    border-bottom-color: 1px solid var(--color-amarillo);
+    border-bottom:1px solid var(--color-amarillo) 1px solid;
+
+}
+
+body.light .botonCambiarModoClaro{
+    border: 2px solid var(--color-amarillo);
 }
 
 body.light footer {
