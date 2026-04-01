@@ -116,6 +116,123 @@ main{
     background: var(--color-tercera-posicio)
 }
 
+.contenidorComentaris {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    height: calc(100vh - var(--header-height, 75px));
+    padding: 30px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.comentari {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    background-color: rgba(10, 26, 14, 0.92);
+    border: 1px solid var(--color-radioactivo);
+    box-shadow: var(--glow), inset 0 0 40px rgba(85,255,114,0.04);
+    border-radius: 4px;
+    padding: 36px 40px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+    position: relative;
+}
+.comentari::before,
+.comentari::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--color-radioactivo);
+    border-style: solid;
+}
+.comentari::before {
+    top: -1px; left: -1px;
+    border-width: 0 0 0 0
+}
+.comentari::after {
+    bottom: -1px; right: -1px;
+    border-width: 0 0 0 0;
+}
+.comentari h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-radioactivo);
+    text-shadow: var(--glow);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.comentari p {
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    color: #7acc8a;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+.formulariComentari {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+.formulariComentari label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--color-radioactivo);
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+input, textarea {
+    background-color: #0d1f10;
+    color: var(--color-fondo-claro);
+    border: 1px solid #2a5c35;
+    border-radius: 3px;
+    padding: 9px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-radioactivo);
+    box-shadow: 0 0 6px rgba(85,255,114,0.4);
+}
+textarea {
+    height: 110px;
+}
+input::placeholder, textarea::placeholder {
+    color: #3a6b44;
+}
+.botoEnviar {
+    background-color: transparent;
+    color: var(--color-radioactivo);
+    border: 1px solid var(--color-radioactivo);
+    padding: 11px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    width: 100%;
+    margin-top: 14px;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+.botoEnviar:hover {
+    background-color: var(--color-radioactivo);
+    color: var(--color-oscuro);
+    box-shadow: var(--glow);
+}
+
 
 @media (max-width: 900px) {
     .contenidorTaula{
