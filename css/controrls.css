@@ -42,3 +42,10 @@ main {
     height: 80%;
     margin: 0 auto;
 }
+
+@media (max-width: 900px) {
+    .box-control {
+        width: 80%;
+        
+    }
+}
