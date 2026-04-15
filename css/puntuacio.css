@@ -238,6 +238,23 @@ input::placeholder, textarea::placeholder {
     box-shadow: var(--glow);
 }
 
+.contenidorComentaris {
+    color: var(--color-letras-radiactivo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    height: calc(100vh - var(--header-height, 75px));
+    padding: 30px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.contenidorComentaris h1{
+    align-items: center;
+}
+
 
 /* MODO CLARO */
 
