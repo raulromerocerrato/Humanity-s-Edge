@@ -16,6 +16,25 @@
     --color-amarillo-hover: #fae73d;
     --color-azul-claro: #d6f3f6;
     --color-gris-claro: #f0f0f0;
+    --color-formulario-fondo:  rgba(85,255,114,0.3);
+    --color-fondo-claro-formulario: #e8ffe8;
+    --color-texto-formulario: #7acc8a;
+    --glow: 0 0 8px #55FF72, 0 0 20px rgba(85,255,114,0.3);
+    --color-textarea-formulario: #2a5c35;
+    --box-shadow-formulario: rgba(85,255,114,0.4);
+    --color-placeholder-formulario: #3a6b44;
+    --color-img-personatge: rgba(85,255,114,0.35);
+    --color-img-personatge-claro: rgba(85,255,114,0.35);
+
+    /* modo claro formulario */ 
+    --color-claro-glow: rgba(255, 200, 0, 0.4);
+    --color-claro-glow-focus: rgba(255, 200, 0, 0.5);
+    --color-claro-fondo-formulario: #fffdf0;
+    --color-claro-texto-formulario: #3a2e00;
+    --color-claro-borde-formulario: #c8a200;
+    --color-claro-placeholder-formulario: #b8960a;
+    --color-claro-texto-descripcion: #7a6000;
+    --color-claro-drop-shadow: rgba(255, 200, 0, 0.4);
 }
 
 @font-face {

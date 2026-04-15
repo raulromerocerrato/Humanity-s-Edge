@@ -1,11 +1,4 @@
-:root {
-    --color-fondo-claro: #e8ffe8;
-    --color-radioactivo: #55FF72;
-    --color-radiactivo-oscuro: #077d43;
-    --color-oscuro: black;
-    --color-fondo-oscuro: #0a1a0e;
-    --glow: 0 0 8px #55FF72, 0 0 20px rgba(85,255,114,0.3);
-}
+
 .contenidorContacte {
     display: flex;
     flex-direction: row;
@@ -21,7 +14,7 @@
     max-height: 75vh;
     width: auto;
     display: block;
-    filter: drop-shadow(0 0 18px rgba(85,255,114,0.35));
+    filter: drop-shadow(0 0 18px var(--color-img-personatge));
 }
 .contacte {
     display: flex;
@@ -29,7 +22,7 @@
     align-items: stretch;
     text-align: center;
     background-color: rgba(10, 26, 14, 0.92);
-    border: 1px solid var(--color-radioactivo);
+    border: 1px solid var(--color-letras-radiactivo);
     box-shadow: var(--glow), inset 0 0 40px rgba(85,255,114,0.04);
     border-radius: 4px;
     padding: 36px 40px;
@@ -44,7 +37,7 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    border-color: var(--color-radioactivo);
+    border-color: var(--color-letras-radiactivo);
     border-style: solid;
 }
 .contacte::before {
@@ -58,7 +51,7 @@
 .contacte h1 {
     font-size: 1.6rem;
     font-weight: bold;
-    color: var(--color-radioactivo);
+    color: var(--color-letras-radiactivo);
     text-shadow: var(--glow);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -67,7 +60,7 @@
 .contacte p {
     font-family: Arial, sans-serif;
     font-size: 0.82rem;
-    color: #7acc8a;
+    color: var(--color-texto-formulario);
     line-height: 1.5;
     margin-bottom: 22px;
 }
@@ -82,14 +75,14 @@
 .formulariContacte label {
     font-size: 0.75rem;
     font-weight: bold;
-    color: var(--color-radioactivo);
+    color: var(--color-letras-radiactivo);
     letter-spacing: 1px;
     margin-top: 8px;
 }
 input, textarea {
     background-color: #0d1f10;
-    color: var(--color-fondo-claro);
-    border: 1px solid #2a5c35;
+    color: var(--color-fondo-claro-formulario);
+    border: 1px solid var(--color-textarea-formulario);
     border-radius: 3px;
     padding: 9px 12px;
     width: 100%;
@@ -100,19 +93,19 @@ input, textarea {
 }
 input:focus, textarea:focus {
     outline: none;
-    border-color: var(--color-radioactivo);
-    box-shadow: 0 0 6px rgba(85,255,114,0.4);
+    border-color: var(--color-letras-radiactivo);
+    box-shadow: 0 0 6px var(--box-shadow-formulario);
 }
 textarea {
     height: 110px;
 }
 input::placeholder, textarea::placeholder {
-    color: #3a6b44;
+    color: var(--color-placeholder-formulario);
 }
 .botoEnviar {
     background-color: transparent;
-    color: var(--color-radioactivo);
-    border: 1px solid var(--color-radioactivo);
+    color: var(--color-letras-radiactivo);
+    border: 1px solid var(--color-letras-radiactivo);
     padding: 11px 20px;
     border-radius: 3px;
     cursor: pointer;
@@ -124,10 +117,72 @@ input::placeholder, textarea::placeholder {
     transition: background-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
 }
 .botoEnviar:hover {
-    background-color: var(--color-radioactivo);
-    color: var(--color-oscuro);
+    background-color: var(--color-letras-radiactivo);
+    color: var(--color-texto-oscuro);
     box-shadow: var(--glow);
 }
+
+
+/* MODO CLARO*/
+
+body.light .imgPersonatge {
+    filter: drop-shadow(0 0 18px var(--color-claro-drop-shadow));
+}
+ 
+body.light .contacte {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-amarillo);
+    box-shadow: 0 0 8px var(--color-claro-glow), inset 0 0 40px var(--color-claro-glow);
+}
+ 
+body.light .contacte::before,
+body.light .contacte::after {
+    border-color: var(--color-amarillo);
+}
+ 
+body.light .contacte h1 {
+    color: var(--color-amarillo);
+    text-shadow: 0 0 8px var(--color-claro-glow-focus);
+}
+ 
+body.light .contacte p {
+    color: var(--color-claro-texto-descripcion);
+}
+ 
+body.light .formulariContacte label {
+    color: var(--color-amarillo);
+}
+ 
+body.light input,
+body.light textarea {
+    background-color: var(--color-claro-fondo-formulario);
+    color: var(--color-claro-texto-formulario);
+    border: 1px solid var(--color-claro-borde-formulario);
+}
+ 
+body.light input:focus,
+body.light textarea:focus {
+    border-color: var(--color-amarillo);
+    box-shadow: 0 0 6px var(--color-claro-glow-focus);
+}
+ 
+body.light input::placeholder,
+body.light textarea::placeholder {
+    color: var(--color-claro-placeholder-formulario);
+}
+ 
+body.light .botoEnviar {
+    color: var(--color-amarillo);
+    border: 1px solid var(--color-amarillo);
+}
+ 
+body.light .botoEnviar:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-fondo-claro);
+    box-shadow: 0 0 8px var(--color-claro-glow-focus);
+}
+
+
 @media (max-width: 900px) {
     .contenidorContacte {
         flex-direction: column;
