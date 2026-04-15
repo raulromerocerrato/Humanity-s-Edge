@@ -1,4 +1,3 @@
-
 .contenidorTaula{
     display: flex;
     justify-content: center;
@@ -240,7 +239,114 @@ input::placeholder, textarea::placeholder {
 }
 
 
-/* MODO CLARO */ 
+/* MODO CLARO */
+
+body.light .nomTaula {
+    color: var(--color-amarillo);
+}
+
+body.light .contingut p {
+    background-color: var(--color-amarillo);
+    border-color: var(--color-amarillo);
+    color: var(--color-texto);
+}
+
+body.light .elementUsuari {
+    border-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+}
+
+body.light .elementDobleUsuari {
+    border-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+}
+
+body.light .usuaris posicio-3 {
+    border-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+}
+
+body.light .elementContingut {
+    border-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+}
+
+body.light .elementDobleContingut {
+    border-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+}
+
+body.light .fondoTaula {
+    background-color: var(--color-fondo-claro);
+}
+
+body.light .contenidorTaula {
+    background-color: var(--color-fondo-claro);
+}
+
+body.light .contenidorComentaris {
+    color: var(--color-texto-oscuro);
+}
+
+body.light .contenidorComentaris h2 {
+    color: var(--color-amarillo);
+}
+
+body.light .formulariComentari label {
+    color: var(--color-claro-texto-formulario);
+}
+
+body.light .formulariComentari input,
+body.light .formulariComentari textarea {
+    background-color: var(--color-claro-fondo-formulario);
+    border: 1px solid var(--color-claro-borde-formulario);
+    color: var(--color-claro-texto-formulario);
+}
+
+body.light .formulariComentari input::placeholder,
+body.light .formulariComentari textarea::placeholder {
+    color: var(--color-claro-placeholder-formulario);
+}
+
+body.light .formulariComentari input:focus,
+body.light .formulariComentari textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px var(--color-claro-glow-focus);
+    border-color: var(--color-amarillo);
+}
+
+body.light .botoEnviar {
+    background-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+    border: none;
+}
+
+body.light .botoEnviar:hover {
+    background-color: var(--color-amarillo-hover);
+}
+
+body.light .comentarisPublicats {
+    color: var(--color-texto-oscuro);
+}
+
+body.light .posicio-1 p {
+    background: var(--color-primera-posicio);
+    border-color: #b8860b;
+    color: var(--color-texto-oscuro);
+}
+
+body.light .posicio-2 p {
+    background: var(--color-segona-posicio);
+    border-color: #a9a9a9;
+    color: var(--color-texto-oscuro);
+}
+
+body.light .posicio-3 p {
+    background: var(--color-tercera-posicio);
+    border-color: #8b4513;
+    color: var(--color-fondo-claro);
+}
+
 
 
 @media (max-width: 900px) {

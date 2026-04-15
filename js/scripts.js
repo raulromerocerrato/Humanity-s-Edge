@@ -217,16 +217,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonModo = document.querySelector('.botonCambiarModoClaro');
 
     if (localStorage.getItem('modo') === 'light') {
-        document.body.classList.add('modo-claro');
-        botonModo.textContent = '🌙';
+        document.body.classList.add('light');
+        botonModo.textContent = 'Claro';
     } else {
-        botonModo.textContent = '☀️';
+        botonModo.textContent = 'Oscuro';
     }
 
     botonModo.addEventListener('click', () => {
         document.body.classList.toggle('light');
         const esModoClaro = document.body.classList.contains('light');
-        botonModo.textContent = esModoClaro ? '🌙' : '☀️';
+        botonModo.textContent = esModoClaro ? 'Claro' : 'Oscuro';
         localStorage.setItem('modo', esModoClaro ? 'light' : 'dark');
     });
 });
