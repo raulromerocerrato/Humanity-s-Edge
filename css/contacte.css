@@ -23,7 +23,6 @@
     text-align: center;
     background-color: rgba(10, 26, 14, 0.92);
     border: 1px solid var(--color-letras-radiactivo);
-    box-shadow: var(--glow), inset 0 0 40px rgba(85,255,114,0.04);
     border-radius: 4px;
     padding: 36px 40px;
     width: 100%;
@@ -31,23 +30,7 @@
     margin: 0;
     position: relative;
 }
-.contacte::before,
-.contacte::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-color: var(--color-letras-radiactivo);
-    border-style: solid;
-}
-.contacte::before {
-    top: -1px; left: -1px;
-    border-width: 0 0 0 0
-}
-.contacte::after {
-    bottom: -1px; right: -1px;
-    border-width: 0 0 0 0;
-}
+
 .contacte h1 {
     font-size: 1.6rem;
     font-weight: bold;
@@ -132,12 +115,6 @@ body.light .imgPersonatge {
 body.light .contacte {
     background-color: var(--color-fondo-claro);
     border: 1px solid var(--color-amarillo);
-    box-shadow: 0 0 8px var(--color-claro-glow), inset 0 0 40px var(--color-claro-glow);
-}
- 
-body.light .contacte::before,
-body.light .contacte::after {
-    border-color: var(--color-amarillo);
 }
  
 body.light .contacte h1 {
