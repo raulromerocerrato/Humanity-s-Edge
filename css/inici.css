@@ -83,4 +83,8 @@ main{
     main{
         margin-top: 10%;
     }
+
+    .imatgePortada img {
+        content: url('../IMG/imgPersonage.jpeg');
+    }
 }
