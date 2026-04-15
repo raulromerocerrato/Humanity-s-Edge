@@ -152,6 +152,146 @@ main {
 }
 
 
+/*  Modo Blanco */
+
+body.light .titol {
+    padding: 60px 0 80px;
+    border-bottom: 1px solid var(--color-amarillo);
+    margin-bottom: 80px;
+}
+
+body.light .titol h1 {
+    font-family: 'WaterSplash', cursive;
+    font-weight: normal;
+    font-size: 64px;
+    color: var(--color-amarillo);
+    line-height: 0.95;
+    margin: 0 0 28px;
+}
+
+body.light .titol p {
+    font-size: 17px;
+    color: var(--color-gris-fuerte);
+    opacity: 0.7;
+    line-height: 1.75;
+    margin: 0;
+}
+
+body .light .seccio h2 {
+    font-family: 'WaterSplash', cursive;
+    font-size: 38px;
+    font-weight: normal;
+    color: var(--color-amarillo);
+    margin: 0 0 8px;
+}
+
+body.light .seccio .descripcio {
+    font-size: 15px;
+    color: var(--color-gris-fuerte);
+    opacity: 0.7;
+    line-height: 1.75;
+    margin: 0 0 40px;
+}
+
+body.light .membre {
+    background: var(--color-azul-claro);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border: 1px solid;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+body.light .membre:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px var(--color-gris-fuerte);
+    border-color: var(--color-gris-fuerte);
+}
+
+body.light .avatar {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    background: var(--color-azul-claro);
+    border: 2px solid var(--color-gris-fuerte);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'WaterSplash', cursive;
+    font-size: 16px;
+    color: var(--color-gris-fuerte);
+}
+
+body.light .membre-info h3 {
+    font-family: 'WaterSplash', cursive;
+    font-size: 22px;
+    font-weight: normal;
+    color: var(--color-gris-fuerte);
+    margin: 0 0 4px;
+}
+
+body.light .membre-rol {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gris-fuerte);
+    opacity: 0.55;
+    display: block;
+    margin-bottom: 10px;
+}
+
+body.light .membre-info p {
+    font-size: 13px;
+    color: var(--color-gris-fuerte);
+    opacity: 0.72;
+    margin: 0;
+}
+
+body.light .jugar {
+    text-align: center;
+    padding: 80px 40px;
+    border-radius: 16px;
+    background: var(--color-azul-claro);
+    border: 1px solid var(--color-gris-fuerte);
+    position: relative;
+    margin-top: 80px;
+}
+
+body.light .jugar h2 {
+    font-family: 'WaterSplash', cursive;
+    font-weight: normal;
+    color: var(--color-amarillo);
+    margin: 0 0 32px;
+    position: relative;
+}
+
+body.light .jugar a {
+    display: inline-block;
+    background: var(--color-gris-fuerte);
+    color: var(--color-azul-claro);
+    font-family: 'WaterSplash', cursive;
+    font-size: 18px;
+    padding: 14px 44px;
+    border-radius: 6px;
+    text-decoration: none;
+    position: relative;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.light .jugar a:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px var(--color-texto);
+}
+
+body.light .seccio h2 {
+    color: var(--color-amarillo);
+}
+
+
 @media (max-width: 900px) {
     .missio {
         grid-template-columns: 1fr;
