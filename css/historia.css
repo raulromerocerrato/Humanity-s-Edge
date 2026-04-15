@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 4%;
+    padding: 20px;
+}
+
+.historia {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.historia img {
+    width: 20%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.historiaText h1 {
+    color: var(--color-letras-radiactivo);
+    font-size: 32px;
+    font-weight: normal;
+    font-family: 'WaterSplash', cursive;
+    margin-bottom: 20px;
+}
+
+.historiaText p {
+    color: var(--color-texto);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
