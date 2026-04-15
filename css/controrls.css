@@ -17,7 +17,7 @@ main {
 
 .box-control{
     display: grid;
-    width: 50%;
+    width: 60%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 125px;
     align-items: center;
