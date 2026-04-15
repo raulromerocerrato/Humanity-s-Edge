@@ -49,12 +49,14 @@
     </section>
     <section class="contenidorComentaris">
         <h2>Comentaris</h2>
-        <div class="formulariComentari">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="missatge">Missatge:</label>
-            <textarea id="missatge" name="missatge" required></textarea>
-            <button id="enviarComentari" class="botoEnviar" onclick="afegirComentari(event)">Enviar Comentari</button>
+        <div class="comentari">
+            <form class="formulariComentari">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="missatge">Missatge:</label>
+                <textarea id="missatge" name="missatge" required></textarea>
+                <button type="submit" class="botoEnviar" onclick="afegirComentari(event)"><b>Enviar</b></button>
+            </form>
         </div>
         <div class="comentarisPublicats">
             
