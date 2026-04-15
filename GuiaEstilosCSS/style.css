@@ -229,9 +229,27 @@ body.light a {
     text-decoration: none;
 }
 
-bodY.light footer a:hover {
+body.light footer a:hover {
     text-decoration: none;
     color: var(--color-amarillo-hover);
+}
+
+body.light .botonCambiarModoClaro {
+    border: 2px solid var(--color-amarillo);
+    color: var(--color-amarillo);
+}
+
+body.light .botonMenu {
+    color: var(--color-amarillo);
+}
+
+body.light main {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-oscuro);
+}
+
+body.light footer a {
+    color: var(--color-amarillo);
 }
 
 

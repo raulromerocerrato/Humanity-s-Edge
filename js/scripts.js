@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonModo = document.querySelector('.botonCambiarModoClaro');
 
     if (localStorage.getItem('modo') === 'light') {
-        document.body.classList.add('modo-claro');
+        document.body.classList.add('light');
         botonModo.textContent = '🌙';
     } else {
         botonModo.textContent = '☀️';
