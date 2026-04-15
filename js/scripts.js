@@ -218,15 +218,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (localStorage.getItem('modo') === 'light') {
         document.body.classList.add('light');
-        botonModo.textContent = 'Claro';
+        botonModo.textContent = 'Clar';
     } else {
-        botonModo.textContent = 'Oscuro';
+        botonModo.textContent = 'Fosc';
     }
 
     botonModo.addEventListener('click', () => {
         document.body.classList.toggle('light');
         const esModoClaro = document.body.classList.contains('light');
-        botonModo.textContent = esModoClaro ? 'Claro' : 'Oscuro';
+        botonModo.textContent = esModoClaro ? 'Clar' : 'Fosc';
         localStorage.setItem('modo', esModoClaro ? 'light' : 'dark');
     });
 });
