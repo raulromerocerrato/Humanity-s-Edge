@@ -51,24 +51,6 @@ main {
 }
 
 
-<<<<<<< HEAD
-.missio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    align-items: start;
-}
-
-.missio p {
-    font-size: 15px;
-    color: var(--color-texto);
-    line-height: 1.8;
-    margin: 0;
-    opacity: 0.8;
-}
-
-=======
->>>>>>> edició-pàgina-Nosaltres
 .equip-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -132,10 +114,6 @@ main {
     margin: 0;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> edició-pàgina-Nosaltres
 .jugar {
     text-align: center;
     padding: 80px 40px;
@@ -146,10 +124,6 @@ main {
     margin-top: 80px;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> edició-pàgina-Nosaltres
 .jugar h2 {
     font-family: 'WaterSplash', cursive;
     font-weight: normal;
