@@ -1,317 +1,196 @@
-/* =============================================
-   SOBRE NOSALTRES — Humanity's Edge
-   ============================================= */
-
-/* --- HERO --- */
-.hero-nosaltres {
-    position: relative;
-    min-height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    margin-top: 80px; /* compensa el header fixed */
-    padding: 60px 20px;
+main {
+    margin-top: 3%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 32px 100px;
 }
 
-/* Fondo con gradiente radial atmosfèric */
-.hero-nosaltres::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(1, 237, 54, 0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(1, 237, 54, 0.04) 0%, transparent 60%);
-    pointer-events: none;
+.titol {
+    padding: 60px 0 80px;
+    border-bottom: 1px solid var(--color-letras-radiactivo);
+    margin-bottom: 80px;
 }
 
-/* Noise texture overlay */
-.hero-noise {
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    background-size: 200px 200px;
-    opacity: 0.4;
-    pointer-events: none;
-}
-
-/* Scanlines */
-.hero-scanlines {
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent 0px,
-        transparent 3px,
-        rgba(0,0,0,0.08) 3px,
-        rgba(0,0,0,0.08) 4px
-    );
-    pointer-events: none;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-tag {
-    font-size: 13px;
-    letter-spacing: 4px;
+.titol h1 {
+    font-family: 'WaterSplash', cursive;
+    font-size: clamp(52px, 10vw, 96px);
+    font-weight: normal;
     color: var(--color-letras-radiactivo);
+    line-height: 0.95;
+    margin: 0 0 28px;
+}
+
+.titol p {
+    font-size: 17px;
+    color: var(--color-texto);
     opacity: 0.7;
-    margin: 0 0 16px;
-    text-transform: uppercase;
-    animation: fadeDown 0.8s ease both;
-}
-
-.hero-title {
-    font-size: clamp(3.5rem, 10vw, 7rem);
-    color: var(--color-letras-radiactivo);
-    margin: 0;
-    line-height: 1;
-    text-shadow:
-        0 0 40px rgba(1, 237, 54, 0.5),
-        0 0 80px rgba(1, 237, 54, 0.2);
-    animation: fadeDown 0.9s ease 0.1s both;
-}
-
-.hero-sub {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    color: rgba(255,255,255,0.6);
-    margin: 18px 0 0;
-    animation: fadeDown 1s ease 0.2s both;
-}
-
-.hero-sub em {
-    color: var(--color-letras-radiactivo);
-    font-style: normal;
-}
-
-.hero-scroll-hint {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--color-letras-radiactivo);
-    opacity: 0.5;
-    font-size: 18px;
-    animation: bounce 2s infinite;
-    z-index: 2;
-}
-
-/* --- BLOCS DE CONTINGUT --- */
-.bloc-info {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    padding: 80px 10%;
-    position: relative;
-}
-
-/* Línia decorativa lateral */
-.bloc-info::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, transparent, var(--color-letras-radiactivo), transparent);
-    opacity: 0.2;
-}
-
-.bloc-dreta { flex-direction: row; }
-.bloc-esquerra { flex-direction: row-reverse; }
-
-/* Alterna fondo lleuger */
-.bloc-esquerra {
-    background: rgba(1, 237, 54, 0.025);
-}
-
-/* Imatge placeholder */
-.placeholder-img {
-    flex-shrink: 0;
-    width: 420px;
-    height: 280px;
-    border: 1px solid rgba(1, 237, 54, 0.3);
-    background:
-        linear-gradient(135deg, rgba(1,237,54,0.05) 0%, transparent 60%),
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(1,237,54,0.03) 10px,
-            rgba(1,237,54,0.03) 11px
-        );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 2px;
-}
-
-/* Cantonades decoratives */
-.placeholder-img::before,
-.placeholder-img::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-color: var(--color-letras-radiactivo);
-    border-style: solid;
-    opacity: 0.6;
-}
-.placeholder-img::before {
-    top: 10px; left: 10px;
-    border-width: 2px 0 0 2px;
-}
-.placeholder-img::after {
-    bottom: 10px; right: 10px;
-    border-width: 0 2px 2px 0;
-}
-
-.img-label {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: var(--color-letras-radiactivo);
-    opacity: 0.4;
-    text-transform: uppercase;
-}
-
-/* Text del bloc */
-.bloc-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
     max-width: 520px;
-}
-
-.bloc-num {
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: var(--color-letras-radiactivo);
-    opacity: 0.5;
-    text-transform: uppercase;
-}
-
-.bloc-text h2 {
-    color: var(--color-letras-radiactivo);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.75;
     margin: 0;
-    text-shadow: 0 0 20px rgba(1, 237, 54, 0.3);
-    line-height: 1.1;
 }
 
-.bloc-text p {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 16px;
+
+.seccio {
+    margin-bottom: 80px;
+}
+
+.seccio h2 {
+    font-family: 'WaterSplash', cursive;
+    font-size: 38px;
+    font-weight: normal;
+    color: var(--color-letras-radiactivo);
+    margin: 0 0 8px;
+}
+
+.seccio .descripcio {
+    font-size: 15px;
+    color: var(--color-texto);
+    opacity: 0.7;
+    line-height: 1.75;
+    max-width: 640px;
+    margin: 0 0 40px;
+}
+
+
+.missio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.missio p {
+    font-size: 15px;
+    color: var(--color-texto);
     line-height: 1.8;
     margin: 0;
+    opacity: 0.8;
 }
 
-.bloc-text em {
-    color: var(--color-letras-radiactivo);
-    font-style: normal;
+.equip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 
-.bloc-divider {
-    width: 60px;
-    height: 2px;
-    background: var(--color-letras-radiactivo);
-    opacity: 0.4;
-    margin-top: 8px;
+.membre {
+    background: var(--color-gris-fuerte);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border: 1px solid transparent;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* --- STATS BAR --- */
-.stats-bar {
+.membre:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px var(--color-letras-radiactivo);
+    border-color: var(--color-letras-radiactivo);
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    background: var(--color-gris-fuerte);
+    border: 2px solid var(--color-letras-radiactivo);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
-    padding: 60px 10%;
-    border-top: 1px solid rgba(1, 237, 54, 0.15);
-    border-bottom: 1px solid rgba(1, 237, 54, 0.15);
-    background: rgba(1, 237, 54, 0.02);
-    margin: 20px 0;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.stat-num {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-family: 'WaterSplash', cursive;
+    font-size: 16px;
     color: var(--color-letras-radiactivo);
-    text-shadow: 0 0 20px rgba(1, 237, 54, 0.5);
-    line-height: 1;
 }
 
-.stat-label {
+.membre-info h3 {
+    font-family: 'WaterSplash', cursive;
+    font-size: 22px;
+    font-weight: normal;
+    color: var(--color-letras-radiactivo);
+    margin: 0 0 4px;
+}
+
+.membre-rol {
     font-size: 11px;
-    letter-spacing: 3px;
-    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
+    color: var(--color-letras-radiactivo);
+    opacity: 0.55;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.stat-sep {
-    color: rgba(1, 237, 54, 0.2);
-    font-size: 2rem;
+.membre-info p {
+    font-size: 13px;
+    color: var(--color-texto);
+    opacity: 0.72;
+    line-height: 1.65;
+    margin: 0;
 }
 
-/* --- SCROLL REVEAL --- */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+.jugar {
+    text-align: center;
+    padding: 80px 40px;
+    border-radius: 16px;
+    background: var(--color-gris-fuerte);
+    border: 1px solid var(--color-letras-radiactivo);
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
 }
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+.jugar h2 {
+    font-family: 'WaterSplash', cursive;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: normal;
+    color: var(--color-texto);
+    margin: 0 0 32px;
+    line-height: 1.1;
+    position: relative;
 }
 
-/* --- ANIMACIONS --- */
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to   { opacity: 1; transform: translateY(0); }
+.jugar a {
+    display: inline-block;
+    background: var(--color-letras-radiactivo);
+    color: var(--color-gris-fuerte);
+    font-family: 'WaterSplash', cursive;
+    font-size: 18px;
+    padding: 14px 44px;
+    border-radius: 6px;
+    text-decoration: none;
+    position: relative;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50%       { transform: translateX(-50%) translateY(8px); }
+.jugar a:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px var(--color-letras-radiactivo);
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .bloc-info,
-    .bloc-esquerra {
+
+@media (max-width: 700px) {
+    .missio {
+        grid-template-columns: 1fr;
+    }
+
+    .valors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membre {
         flex-direction: column;
-        padding: 60px 6%;
-        gap: 40px;
     }
 
-    .placeholder-img {
-        width: 100%;
-        height: 220px;
-    }
-
-    .bloc-text {
-        max-width: 100%;
-    }
-
-    .stats-bar {
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .stat-sep {
-        display: none;
+    .titol h1 {
+        font-size: 48px;
     }
 }
