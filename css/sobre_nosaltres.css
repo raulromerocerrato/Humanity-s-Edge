@@ -14,8 +14,8 @@ main {
 
 .titol h1 {
     font-family: 'WaterSplash', cursive;
-    font-size: clamp(52px, 10vw, 96px);
     font-weight: normal;
+    font-size: 64px;
     color: var(--color-letras-radiactivo);
     line-height: 0.95;
     margin: 0 0 28px;
@@ -25,7 +25,6 @@ main {
     font-size: 17px;
     color: var(--color-texto);
     opacity: 0.7;
-    max-width: 520px;
     line-height: 1.75;
     margin: 0;
 }
@@ -48,11 +47,11 @@ main {
     color: var(--color-texto);
     opacity: 0.7;
     line-height: 1.75;
-    max-width: 640px;
     margin: 0 0 40px;
 }
 
 
+<<<<<<< HEAD
 .missio {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,6 +67,8 @@ main {
     opacity: 0.8;
 }
 
+=======
+>>>>>>> edició-pàgina-Nosaltres
 .equip-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -81,7 +82,7 @@ main {
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    border: 1px solid transparent;
+    border: 1px solid;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -128,10 +129,13 @@ main {
     font-size: 13px;
     color: var(--color-texto);
     opacity: 0.72;
-    line-height: 1.65;
     margin: 0;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> edició-pàgina-Nosaltres
 .jugar {
     text-align: center;
     padding: 80px 40px;
@@ -139,17 +143,18 @@ main {
     background: var(--color-gris-fuerte);
     border: 1px solid var(--color-letras-radiactivo);
     position: relative;
-    overflow: hidden;
     margin-top: 80px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> edició-pàgina-Nosaltres
 .jugar h2 {
     font-family: 'WaterSplash', cursive;
-    font-size: clamp(28px, 5vw, 52px);
     font-weight: normal;
     color: var(--color-texto);
     margin: 0 0 32px;
-    line-height: 1.1;
     position: relative;
 }
 
@@ -173,7 +178,7 @@ main {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .missio {
         grid-template-columns: 1fr;
     }
@@ -184,10 +189,6 @@ main {
 
     .equip-grid {
         grid-template-columns: 1fr;
-    }
-
-    .membre {
-        flex-direction: column;
     }
 
     .titol h1 {
