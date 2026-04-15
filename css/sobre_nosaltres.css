@@ -5,13 +5,13 @@ main {
     margin-right: auto;
     padding: 60px 32px 100px;
 }
- 
+
 .titol {
     padding: 60px 0 80px;
     border-bottom: 1px solid var(--color-letras-radiactivo);
     margin-bottom: 80px;
 }
- 
+
 .titol h1 {
     font-family: 'WaterSplash', cursive;
     font-size: clamp(52px, 10vw, 96px);
@@ -20,7 +20,7 @@ main {
     line-height: 0.95;
     margin: 0 0 28px;
 }
- 
+
 .titol p {
     font-size: 17px;
     color: var(--color-texto);
@@ -29,12 +29,12 @@ main {
     line-height: 1.75;
     margin: 0;
 }
- 
-/* ── SECCIONS GENERALS ── */
+
+
 .seccio {
     margin-bottom: 80px;
 }
- 
+
 .seccio h2 {
     font-family: 'WaterSplash', cursive;
     font-size: 38px;
@@ -42,7 +42,7 @@ main {
     color: var(--color-letras-radiactivo);
     margin: 0 0 8px;
 }
- 
+
 .seccio .descripcio {
     font-size: 15px;
     color: var(--color-texto);
@@ -51,15 +51,15 @@ main {
     max-width: 640px;
     margin: 0 0 40px;
 }
- 
-/* ── MISSIÓ — layout asimètric ── */
+
+
 .missio {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     align-items: start;
 }
- 
+
 .missio p {
     font-size: 15px;
     color: var(--color-texto);
@@ -73,7 +73,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
- 
+
 .membre {
     background: var(--color-gris-fuerte);
     border-radius: 12px;
@@ -84,13 +84,13 @@ main {
     border: 1px solid transparent;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
- 
+
 .membre:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 24px var(--color-letras-radiactivo);
     border-color: var(--color-letras-radiactivo);
 }
- 
+
 .avatar {
     width: 56px;
     height: 56px;
@@ -105,7 +105,7 @@ main {
     font-size: 16px;
     color: var(--color-letras-radiactivo);
 }
- 
+
 .membre-info h3 {
     font-family: 'WaterSplash', cursive;
     font-size: 22px;
@@ -113,7 +113,7 @@ main {
     color: var(--color-letras-radiactivo);
     margin: 0 0 4px;
 }
- 
+
 .membre-rol {
     font-size: 11px;
     letter-spacing: 0.15em;
@@ -123,7 +123,7 @@ main {
     display: block;
     margin-bottom: 10px;
 }
- 
+
 .membre-info p {
     font-size: 13px;
     color: var(--color-texto);
@@ -131,7 +131,7 @@ main {
     line-height: 1.65;
     margin: 0;
 }
- 
+
 .jugar {
     text-align: center;
     padding: 80px 40px;
@@ -142,7 +142,7 @@ main {
     overflow: hidden;
     margin-top: 80px;
 }
- 
+
 .jugar h2 {
     font-family: 'WaterSplash', cursive;
     font-size: clamp(28px, 5vw, 52px);
@@ -152,7 +152,7 @@ main {
     line-height: 1.1;
     position: relative;
 }
- 
+
 .jugar a {
     display: inline-block;
     background: var(--color-letras-radiactivo);
@@ -165,19 +165,32 @@ main {
     position: relative;
     transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .jugar a:hover {
     opacity: 0.88;
     transform: translateY(-2px);
     box-shadow: 0 0 24px var(--color-letras-radiactivo);
 }
- 
-/* ── RESPONSIVE ── */
+
+
 @media (max-width: 700px) {
-    .missio  { grid-template-columns: 1fr; }
-    .valors-grid    { grid-template-columns: 1fr; }
-    .equip-grid     { grid-template-columns: 1fr; }
-    .membre         { flex-direction: column; }
-    .titol h1        { font-size: 48px; }
+    .missio {
+        grid-template-columns: 1fr;
+    }
+
+    .valors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membre {
+        flex-direction: column;
+    }
+
+    .titol h1 {
+        font-size: 48px;
+    }
 }
- 
