@@ -241,6 +241,79 @@ input::placeholder, textarea::placeholder {
 
 /* MODO CLARO */
 
+body.light .contenidorComentaris {
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-claro);
+}
+ 
+body.light .contenidorComentaris h1 {
+    color: var(--color-amarillo);
+}
+ 
+body.light .contenidorComentaris h2 {
+    color: var(--color-amarillo);
+}
+ 
+body.light .comentari {
+    background-color: #ffffff;
+    border: 1px solid var(--color-amarillo);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+ 
+body.light .comentari h1 {
+    color: var(--color-amarillo);
+    text-shadow: none;
+}
+ 
+body.light .comentari p {
+    color: var(--color-texto-oscuro);
+}
+ 
+body.light .formulariComentari label {
+    color: var(--color-texto-oscuro);
+}
+ 
+body.light .formulariComentari input,
+body.light .formulariComentari textarea,
+body.light input,
+body.light textarea {
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    color: var(--color-texto-oscuro);
+}
+ 
+body.light .formulariComentari input::placeholder,
+body.light .formulariComentari textarea::placeholder,
+body.light input::placeholder,
+body.light textarea::placeholder {
+    color: #aaaaaa;
+}
+ 
+body.light .formulariComentari input:focus,
+body.light .formulariComentari textarea:focus,
+body.light input:focus,
+body.light textarea:focus {
+    outline: none;
+    border-color: var(--color-amarillo);
+    box-shadow: 0 0 8px rgba(255, 200, 0, 0.35);
+}
+ 
+body.light .botoEnviar {
+    background-color: var(--color-amarillo);
+    color: var(--color-texto-oscuro);
+    border: none;
+}
+ 
+body.light .botoEnviar:hover {
+    background-color: var(--color-amarillo-hover);
+    box-shadow: 0 0 10px rgba(255, 200, 0, 0.4);
+    color: var(--color-texto-oscuro);
+}
+ 
+body.light .comentarisPublicats {
+    color: var(--color-texto-oscuro);
+}
+
 body.light .nomTaula {
     color: var(--color-amarillo);
 }
