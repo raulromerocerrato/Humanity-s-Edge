@@ -14,6 +14,10 @@ main{
     flex-direction: column;
     justify-content: space-between;
 }
+
+body.light main{
+    background-image: url(../IMG/PersonajeMans_clar.png);
+}
  
 .mainJugar{
     display: flex;
