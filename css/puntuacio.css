@@ -409,7 +409,7 @@ body.light .posicio-2 p {
 body.light .posicio-3 p {
     background: var(--color-tercera-posicio);
     border-color: #8b4513;
-    color: var(--color-fondo-claro);
+    color: var(--color-texto-oscuro);
 }
 
 
