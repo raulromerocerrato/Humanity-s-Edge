@@ -215,18 +215,28 @@ document.addEventListener("DOMContentLoaded", function() {
 // Cambiar modo colores
 document.addEventListener('DOMContentLoaded', () => {
     const botonModo = document.querySelector('.botonCambiarModoClaro');
+    const imagenesModo = document.querySelectorAll('[data-src-dark][data-src-light]');
+
+    function actualizarImagenes(esModoClaro) {
+        imagenesModo.forEach((imagen) => {
+            imagen.src = esModoClaro ? imagen.dataset.srcLight : imagen.dataset.srcDark;
+        });
+    }
 
     if (localStorage.getItem('modo') === 'light') {
         document.body.classList.add('light');
         botonModo.textContent = 'Clar';
+        actualizarImagenes(true);
     } else {
         botonModo.textContent = 'Fosc';
+        actualizarImagenes(false);
     }
 
     botonModo.addEventListener('click', () => {
         document.body.classList.toggle('light');
         const esModoClaro = document.body.classList.contains('light');
         botonModo.textContent = esModoClaro ? 'Clar' : 'Fosc';
+        actualizarImagenes(esModoClaro);
         localStorage.setItem('modo', esModoClaro ? 'light' : 'dark');
     });
 });
