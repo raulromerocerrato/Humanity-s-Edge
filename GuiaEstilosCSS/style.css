@@ -49,7 +49,7 @@ html{
     scrollbar-color: var(--color-letras-radiactivo) black;
 }
 .active {
-    background-color: #7F77DD;
+    background-color: var(--color-formulario-fondo);
     border-radius: 6px;
 }
 
