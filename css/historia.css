@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -59,17 +58,67 @@ body.light .historiaText p {
 }
 
 body.light .historia img {
-    width: 20%;
-    height: 40%;
     border-radius: 10px;
+    /* width y height heredados de .historia img para que las media queries funcionen correctamente */
 }
 
 
 @media (max-width: 900px) {
-    .historia {
-        grid-template-columns: 1fr;
-    }
-    main{
+    main {
         margin-top: 10%;
+        padding: 15px;
+    }
+
+    .historia {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .historia img,
+    body.light .historia img {
+        width: 60%;
+        height: auto;
+        order: -1; /* la imagen aparece antes del texto */
+    }
+
+    .historiaText h1 {
+        font-size: 26px;
+    }
+
+    .historiaText p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 15%;
+        padding: 10px;
+    }
+
+    .historia {
+        gap: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .historia img,
+    body.light .historia img {
+        width: 80%;
+        height: auto;
+    }
+
+    .historiaText h1 {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .historiaText p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 14px;
     }
 }
