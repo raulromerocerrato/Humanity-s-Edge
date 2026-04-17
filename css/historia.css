@@ -63,3 +63,13 @@ body.light .historia img {
     height: 40%;
     border-radius: 10px;
 }
+
+
+@media (max-width: 900px) {
+    .historia {
+        grid-template-columns: 1fr;
+    }
+    main{
+        margin-top: 10%;
+    }
+}
