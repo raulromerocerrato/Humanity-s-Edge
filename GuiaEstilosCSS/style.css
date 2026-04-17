@@ -324,9 +324,7 @@ body.light .logoInsta{
     }
 
     .instagramIcones {
-        display: flex;
-
-        gap: 5px;
-        justify-content: center;
+        padding-left: 30px;
+        padding-right: 20px;
     }
 }
