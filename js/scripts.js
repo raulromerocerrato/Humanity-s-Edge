@@ -110,7 +110,7 @@ function afegirComentari(e) {
 
 // part de posts
 
-async function cargarPosts() {
+async function carregarPosts() {
     const contenidor = document.querySelector('.postsPublicats');
     if (contenidor == null) {
         return;
@@ -119,15 +119,15 @@ async function cargarPosts() {
     try {
         const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts" + "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
         const resposta = await fetch(url);
-        const datos = await resposta.json();
+        const dades = await resposta.json();
         if (!resposta.ok) {
-            console.log("Error en la respuesta");
+            console.log("Error a la esposta");
             contenidor.innerHTML = '<p class="errorDades">Error al servidor</p>';
             return;
         }
-        let llista = datos.data; 
+        let llista = dades.data; 
         if (llista == null) {
-            llista = datos;
+            llista = dades;
         }
         mostrarPosts(llista);
     } catch (error) {
@@ -267,6 +267,7 @@ function mostrarError() {
 
 document.addEventListener("DOMContentLoaded", function() {
     cargarPuntuaciones();
+    carregarPosts();
     setInterval(cargarPuntuaciones, tiempoActualizacion);
 });
 
