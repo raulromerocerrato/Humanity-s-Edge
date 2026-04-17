@@ -1,0 +1,12 @@
+body h1{
+    margin-top: 20%;
+    text-align: center;
+    align-items: center;
+    color: var(--color-letras-radiactivo);
+}
+
+body p{
+    text-align: center;
+    align-items: center;
+    color: var(--color-letras-radiactivo);
+}
