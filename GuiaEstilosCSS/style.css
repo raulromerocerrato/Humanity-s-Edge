@@ -47,6 +47,10 @@
 html{
     scrollbar-color: var(--color-letras-radiactivo) black;
 }
+.active {
+    background-color: #7F77DD;
+    border-radius: 6px;
+}
 
 body{
     font-family: 'WaterSplash', cursive;
@@ -190,7 +194,10 @@ body.light html{
 body.light {
     background-color: var(--color-texto);
 }
-
+body.light .active {
+    background-color: var(--color-azul2);
+    border-radius: 6px;
+}
 body.light header {
     background-color: var(--color-fondo-claro);
     border-bottom-color: 2px solid var(--color-amarillo);
