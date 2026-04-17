@@ -78,38 +78,40 @@ function afegirMissatge(e) {
 
 //part de comentaris
 
-function afegirComentari(e) {
+async function afegirComentari(e) {
     e.preventDefault();
-
     const formulari = document.querySelector('.formulariComentari');
-
+    const inputNom = document.getElementById('nom');
+    const inputMissatge = document.getElementById('missatge');
+    if (inputNom.value === '' || inputMissatge.value === '') {
+        alert('Per favor, omple el nom i el missatge.');
+        return;
+    }
     const dades = {
-        api_token: '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK',
-        nombre: document.getElementById('nom').value,
-        mensaje: document.getElementById('missatge').value
+        api_token: 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS',
+        nombre: inputNom.value,
+        mensaje: inputMissatge.value
     };
-
-    fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dades)
-    })
-    .then(resposta => {
+    try {
+        const resposta = await fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dades)
+        });
         if (resposta.ok) {
-            alert('Missatge enviat correctament!');
+            alert('Comentari enviat correctament!');
             formulari.reset();
+            carregarComentaris(); 
         } else {
-            return resposta.json().then(err => {
-                throw new Error(err.message || 'Error al servidor');
-            });
+            console.log("Error de l'API");
+            alert('Hi ha hagut un problema al servidor.');
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('No s\'ha pogut enviar el missatge: ' + error.message);
-    });
+    } catch (error) {
+        console.log('Error d\'execució:', error);
+        alert('No s\'ha pogut connectar amb el servidor.');
+    }
 }
 
 async function carregarComentaris() {
@@ -141,7 +143,7 @@ async function carregarComentaris() {
         for (let i = llista.length - 1; i >= 0; i--) {
             let c = llista[i];
             let divComentari = document.createElement('div');
-            divComentari.classList.add('comentariPublicat'); 
+            divComentari.classList.add('comentarisPublicats'); 
             let contingutHTML = `
                 <div class="comentariInfo">
                     <p><b>${nomUsuari}</b></p>
