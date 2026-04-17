@@ -38,13 +38,15 @@ function navPagina(nomPagina){
     }
 }
 
+///part de contacte
+
 function afegirMissatge(e) {
     e.preventDefault();
 
     const formulari = document.querySelector('.formulariContacte');
 
     const dades = {
-        api_token: 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS',
+        api_token: '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK',
         nombre: document.getElementById('nom').value,
         email: document.getElementById('email').value,
         asunto: document.getElementById('asunto')?.value || 'Contacte web',
@@ -74,38 +76,149 @@ function afegirMissatge(e) {
     });
 }
 
-function afegirComentari(e) {
+//part de comentaris
+
+async function afegirComentari(e) {
     e.preventDefault();
-
     const formulari = document.querySelector('.formulariComentari');
-
+    const inputNom = document.getElementById('nom');
+    const inputMissatge = document.getElementById('missatge');
+    if (inputNom.value === '' || inputMissatge.value === '') {
+        alert('Per favor, omple el nom i el missatge.');
+        return;
+    }
     const dades = {
         api_token: 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS',
-        nombre: document.getElementById('nom').value,
-        mensaje: document.getElementById('missatge').value
+        nombre: inputNom.value,
+        mensaje: inputMissatge.value
     };
-
-    fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dades)
-    })
-    .then(resposta => {
+    try {
+        const resposta = await fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dades)
+        });
         if (resposta.ok) {
-            alert('Missatge enviat correctament!');
+            alert('Comentari enviat correctament!');
             formulari.reset();
+            carregarComentaris(); 
         } else {
-            return resposta.json().then(err => {
-                throw new Error(err.message || 'Error al servidor');
-            });
+            console.log("Error de l'API");
+            alert('Hi ha hagut un problema al servidor.');
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('No s\'ha pogut enviar el missatge: ' + error.message);
-    });
+    } catch (error) {
+        console.log('Error d\'execució:', error);
+        alert('No s\'ha pogut connectar amb el servidor.');
+    }
+}
+
+async function carregarComentaris() {
+    const contenidor = document.querySelector('.comentarisPublicats');
+    if (contenidor == null) {
+        return;
+    }
+    contenidor.innerHTML = '<p>Carregant comentaris...</p>';
+    try {
+        const tokenComentaris = 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS';
+        const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
+        
+        const resposta = await fetch(ruta);
+        const dades = await resposta.json();
+
+        if (!resposta.ok) {
+            contenidor.innerHTML = '<p>Error al carregar els comentaris</p>';
+            return;
+        }
+        let llista = dades.data;
+        if (llista == null) {
+            llista = dades;
+        }
+        if (llista.length === 0) {
+            contenidor.innerHTML = '<p>Encara no hi ha comentaris. Sigues el primer!</p>';
+            return;
+        }
+        contenidor.innerHTML = '';
+        for (let i = llista.length - 1; i >= 0; i--) {
+            let c = llista[i];
+            let divComentari = document.createElement('div');
+            divComentari.classList.add('comentarisPublicats'); 
+            let contingutHTML = `
+                <div class="comentariInfo">
+                    <p><b>${nomUsuari}</b></p>
+                </div>
+                <p class="comentariText">${textMissatge}</p>
+                <hr>
+            `;
+            divComentari.innerHTML = contingutHTML;
+            contenidor.appendChild(divComentari);
+        }
+
+    } catch (error) {
+        console.log("Error en carregar comentaris:", error);
+        contenidor.innerHTML = '<p>No s\'han pogut carregar els comentaris.</p>';
+    }
+}
+
+// part de posts
+
+async function carregarPosts() {
+    const contenidor = document.querySelector('.postsPublicats');
+    if (contenidor == null) {
+        return;
+    }
+    contenidor.innerHTML = '<p class="carregant">Carregant posts…</p>';
+    try {
+        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK";
+        const resposta = await fetch(url);
+        const dades = await resposta.json();
+        if (!resposta.ok) {
+            console.log("Error a la esposta");
+            contenidor.innerHTML = '<p class="errorDades">Error al servidor</p>';
+            return;
+        }
+        let llista = dades.data; 
+        if (llista == null) {
+            llista = dades;
+        }
+        mostrarPosts(llista);
+    } catch (error) {
+        console.log("Error carregant posts:", error);
+        contenidor.innerHTML = '<p class="errorDades">No s\'han pogut carregar els posts.</p>';
+    }
+}
+
+function mostrarPosts(llista) {
+    const contenidor = document.querySelector('.postsPublicats');
+    if (llista.length === 0) {
+        contenidor.innerHTML = '<p class="senseDades">Encara no hi ha posts publicats.</p>';
+        return;
+    }
+    contenidor.innerHTML = '';
+    for (let i = llista.length - 1; i >= 0; i--) {
+        let post = llista[i];
+        let article = document.createElement('article');
+        article.classList.add('postItem');
+        let titol = post.titulo;
+        if (titol == null) {
+            titol = 'Post';
+        }
+        let autor = post.autor;
+        if (autor == null) {
+            autor = 'Anònim';
+        }
+        let htmlPost = `
+            <div class="postCapcalera">
+                <h3 class="postTitol">${titol}</h3>
+                <div class="postMeta">
+                    <span class="postAutor">${autor}</span>
+                </div>
+            </div>
+        `;
+        article.innerHTML = htmlPost;
+        contenidor.appendChild(article);
+    }
 }
 
 function mostrarBarraNavegacio() {
@@ -207,6 +320,8 @@ function mostrarError() {
 
 document.addEventListener("DOMContentLoaded", function() {
     cargarPuntuaciones();
+    carregarPosts();
+    carregarComentaris();
     setInterval(cargarPuntuaciones, tiempoActualizacion);
 });
 
