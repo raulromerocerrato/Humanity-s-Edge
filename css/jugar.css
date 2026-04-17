@@ -105,66 +105,33 @@ body.light main{
 
 /* MODO CLARO */
 
-
 body.light .mainJugar h1{
     color: var(--color-amarillo);
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
 }
  
 body.light .mainJugar p{
     color: var(--color-amarillo);
-    font-size: 24px;
-    margin-bottom: 30px;
 }
  
 body.light .mainJugar button {
     background-color: var(--color-gris2);
-    font-family: 'WaterSplash', cursive;
-    padding: 50px 100px;
     color: var(--color-amarillo);
-    border-radius: 5px;
-    transition: transform 0.7s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    font-size: 24px;
-    border-color: var(--color-amarillo);
-    font-weight: bold;
-    cursor: pointer;
     border: 1px solid var(--color-amarillo);
 }
  
-.body.light .mainJugar button:hover {
+body.light .mainJugar button:hover {
     transform: scale(1.1);
     background-color: var(--color-amarillo-hover);
     box-shadow: 0 0 50px var(--color-amarillo);
 }
 
- 
-body.light .zonaInfo{
-    flex: 1;
-    display: flex;
-    gap: 50px;
-    color: white;
-    font-size: 24px;
-    padding: 30px 40px;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
- 
 body.light .zonaInfo button {
     background-color: var(--color-gris2);
-    padding: 20px 40px;
     color: var(--color-amarillo);
     border-color: var(--color-amarillo);
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.7s ease, box-shadow 0.3s ease;
 }
  
-.body.light .zonaInfo button:hover {
+body.light .zonaInfo button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px var(--color-amarillo);
 }
@@ -179,15 +146,18 @@ body.light .zonaInfo button {
         gap: 20px;
     }
  
-    .mainJugar h1 {
+    .mainJugar h1,
+    body.light .mainJugar h1 {
         font-size: 28px;
     }
  
-    .mainJugar p {
+    .mainJugar p,
+    body.light .mainJugar p {
         font-size: 18px;
     }
  
-    .mainJugar button {
+    .mainJugar button,
+    body.light .mainJugar button {
         padding: 30px 60px;
         font-size: 18px;
     }
@@ -196,7 +166,8 @@ body.light .zonaInfo button {
         flex-direction: column;
     }
  
-    .zonaInfo {
+    .zonaInfo,
+    body.light .zonaInfo {
         gap: 20px;
         font-size: 18px;
         padding: 20px;
@@ -207,7 +178,8 @@ body.light .zonaInfo button {
         border-bottom: 1px solid rgba(85, 255, 114, 0.2);
     }
  
-    .zonaInfo button {
+    .zonaInfo button,
+    body.light .zonaInfo button {
         padding: 15px 30px;
         font-size: 16px;
     }
