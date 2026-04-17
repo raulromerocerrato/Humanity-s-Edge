@@ -112,6 +112,53 @@ function afegirComentari(e) {
     });
 }
 
+async function carregarComentaris() {
+    const contenidor = document.querySelector('.comentarisPublicats');
+    if (contenidor == null) {
+        return;
+    }
+    contenidor.innerHTML = '<p>Carregant comentaris...</p>';
+    try {
+        const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
+        const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
+        
+        const resposta = await fetch(ruta);
+        const dades = await resposta.json();
+
+        if (!resposta.ok) {
+            contenidor.innerHTML = '<p>Error al carregar els comentaris</p>';
+            return;
+        }
+        let llista = dades.data;
+        if (llista == null) {
+            llista = dades;
+        }
+        if (llista.length === 0) {
+            contenidor.innerHTML = '<p>Encara no hi ha comentaris. Sigues el primer!</p>';
+            return;
+        }
+        contenidor.innerHTML = '';
+        for (let i = llista.length - 1; i >= 0; i--) {
+            let c = llista[i];
+            let divComentari = document.createElement('div');
+            divComentari.classList.add('comentariPublicat'); 
+            let contingutHTML = `
+                <div class="comentariInfo">
+                    <p><b>${nomUsuari}</b></p>
+                </div>
+                <p class="comentariText">${textMissatge}</p>
+                <hr>
+            `;
+            divComentari.innerHTML = contingutHTML;
+            contenidor.appendChild(divComentari);
+        }
+
+    } catch (error) {
+        console.log("Error en carregar comentaris:", error);
+        contenidor.innerHTML = '<p>No s\'han pogut carregar els comentaris.</p>';
+    }
+}
+
 // part de posts
 
 async function carregarPosts() {
