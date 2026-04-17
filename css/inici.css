@@ -141,7 +141,7 @@ body.light .infoPagines article button:hover {
 }
 
 body.light .imatgePortada img {
-    height: 672.2px;
+    height: 50%;
     display: block;
     margin: 0 auto;
     border-bottom: 2px solid var(--color-amarillo);
