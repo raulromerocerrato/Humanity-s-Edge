@@ -108,6 +108,66 @@ function afegirComentari(e) {
     });
 }
 
+// part de posts
+
+async function cargarPosts() {
+    const contenidor = document.querySelector('.postsPublicats');
+    if (contenidor == null) {
+        return;
+    }
+    contenidor.innerHTML = '<p class="carregant">Carregant posts…</p>';
+    try {
+        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts" + "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+        const resposta = await fetch(url);
+        const datos = await resposta.json();
+        if (!resposta.ok) {
+            console.log("Error en la respuesta");
+            contenidor.innerHTML = '<p class="errorDades">Error al servidor</p>';
+            return;
+        }
+        let llista = datos.data; 
+        if (llista == null) {
+            llista = datos;
+        }
+        mostrarPosts(llista);
+    } catch (error) {
+        console.log("Error carregant posts:", error);
+        contenidor.innerHTML = '<p class="errorDades">No s\'han pogut carregar els posts.</p>';
+    }
+}
+
+function mostrarPosts(llista) {
+    const contenidor = document.querySelector('.postsPublicats');
+    if (llista.length === 0) {
+        contenidor.innerHTML = '<p class="senseDades">Encara no hi ha posts publicats.</p>';
+        return;
+    }
+    contenidor.innerHTML = '';
+    for (let i = llista.length - 1; i >= 0; i--) {
+        let post = llista[i];
+        let article = document.createElement('article');
+        article.classList.add('postItem');
+        let titol = post.titulo;
+        if (titol == null) {
+            titol = 'Post';
+        }
+        let autor = post.autor;
+        if (autor == null) {
+            autor = 'Anònim';
+        }
+        let htmlPost = `
+            <div class="postCapcalera">
+                <h3 class="postTitol">${titol}</h3>
+                <div class="postMeta">
+                    <span class="postAutor">${autor}</span>
+                </div>
+            </div>
+        `;
+        article.innerHTML = htmlPost;
+        contenidor.appendChild(article);
+    }
+}
+
 function mostrarBarraNavegacio() {
     const barra = document.querySelector('.barraNavegacio');
     
