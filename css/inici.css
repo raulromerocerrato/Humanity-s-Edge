@@ -82,8 +82,7 @@ main{
 }
 
 body.light .imatgePortada img {
-    width: 100%;
-    height: auto;
+    height: 90vh;
     display: block;
     margin: 0 auto;
     border-bottom: 2px solid var(--color-amarillo);
@@ -138,13 +137,6 @@ body.light .infoPagines article button:hover {
     background: var(--color-amarillo-hover);
     color: var(--color-gris-claro);
     box-shadow: 0 0 10px var(--color-amarillo);
-}
-
-body.light .imatgePortada img {
-    height: 50%;
-    display: block;
-    margin: 0 auto;
-    border-bottom: 2px solid var(--color-amarillo);
 }
 
 
