@@ -38,6 +38,8 @@ function navPagina(nomPagina){
     }
 }
 
+///part de contacte
+
 function afegirMissatge(e) {
     e.preventDefault();
 
@@ -73,6 +75,8 @@ function afegirMissatge(e) {
         alert('No s\'ha pogut enviar el missatge: ' + error.message);
     });
 }
+
+//part de comentaris
 
 function afegirComentari(e) {
     e.preventDefault();
@@ -117,7 +121,7 @@ async function carregarPosts() {
     }
     contenidor.innerHTML = '<p class="carregant">Carregant posts…</p>';
     try {
-        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts" + "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
         const resposta = await fetch(url);
         const dades = await resposta.json();
         if (!resposta.ok) {
