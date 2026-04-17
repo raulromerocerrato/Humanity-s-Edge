@@ -12,6 +12,10 @@ main {
     margin-bottom: 80px;
 }
 
+.enllaçInstagram {
+    text-decoration: none;
+}
+
 .titol h1 {
     font-family: 'WaterSplash', cursive;
     font-weight: normal;
