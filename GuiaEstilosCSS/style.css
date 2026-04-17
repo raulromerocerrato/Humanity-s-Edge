@@ -214,6 +214,7 @@ footer a:hover {
     width: 35%;
 }
 
+
 /* Modo claro */
 
 body.light html{
@@ -320,5 +321,12 @@ body.light .logoInsta{
 
     header{
         gap: 0;
+    }
+
+    .instagramIcones {
+        display: flex;
+
+        gap: 5px;
+        justify-content: center;
     }
 }
