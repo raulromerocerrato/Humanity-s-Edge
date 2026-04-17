@@ -119,7 +119,7 @@ async function carregarComentaris() {
     }
     contenidor.innerHTML = '<p>Carregant comentaris...</p>';
     try {
-        const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
+        const tokenComentaris = 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
         
         const resposta = await fetch(ruta);
@@ -319,6 +319,7 @@ function mostrarError() {
 document.addEventListener("DOMContentLoaded", function() {
     cargarPuntuaciones();
     carregarPosts();
+    carregarComentaris();
     setInterval(cargarPuntuaciones, tiempoActualizacion);
 });
 
