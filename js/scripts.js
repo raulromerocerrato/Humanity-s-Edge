@@ -129,13 +129,13 @@ function mostrarBarraNavegacio() {
 // pagina puntuació 
 
 const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/";
-const token = "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+const token = "9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK";
 
 const tiempoActualizacion = 5000;
 
 async function cargarPuntuaciones() {
     try {
-        const resposta = await fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS/10");
+        const resposta = await fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK/10");
         const datos = await resposta.json();
 
         if (!resposta.ok) {
