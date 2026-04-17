@@ -188,6 +188,32 @@ footer a:hover {
     
 }
 
+
+.instagramLinks{
+    width: 400px;
+    color: var(--color-letras-radiactivo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.instagramLinks p{
+    text-align: center;
+    height: 35px;
+}
+.instagramIcones{
+    display: flex;
+    gap: 5px;
+
+}
+.instagramIcones p{
+    width: 0px;
+    margin: 0px;
+    
+}
+.logoInsta{
+    width: 35%;
+}
+
 /* Modo claro */
 
 body.light html{
@@ -261,6 +287,14 @@ body.light footer a {
     color: var(--color-amarillo);
 }
 
+body.light .instagramLinks{
+    width: 400px;
+    color: var(--color-amarillo);
+}
+
+body.light .logoInsta{
+    width: 45%;
+}
 
 
 
