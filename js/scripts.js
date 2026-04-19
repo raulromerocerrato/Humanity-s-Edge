@@ -123,10 +123,8 @@ async function carregarComentaris() {
     try {
         const tokenComentaris = 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
-        
         const resposta = await fetch(ruta);
         const dades = await resposta.json();
-
         if (!resposta.ok) {
             contenidor.innerHTML = '<p>Error al carregar els comentaris</p>';
             return;
@@ -146,15 +144,14 @@ async function carregarComentaris() {
             divComentari.classList.add('comentarisPublicats'); 
             let contingutHTML = `
                 <div class="comentariInfo">
-                    <p><b>${nomUsuari}</b></p>
+                    <p><b>${c.name}</b></p>
                 </div>
-                <p class="comentariText">${textMissatge}</p>
+                <p class="comentariText">${c.content}</p>
                 <hr>
             `;
             divComentari.innerHTML = contingutHTML;
             contenidor.appendChild(divComentari);
         }
-
     } catch (error) {
         console.log("Error en carregar comentaris:", error);
         contenidor.innerHTML = '<p>No s\'han pogut carregar els comentaris.</p>';
