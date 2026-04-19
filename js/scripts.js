@@ -121,7 +121,7 @@ async function carregarComentaris() {
     }
     contenidor.innerHTML = '<p>Carregant comentaris...</p>';
     try {
-        const tokenComentaris = 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS';
+        const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
         const resposta = await fetch(ruta);
         const dades = await resposta.json();
