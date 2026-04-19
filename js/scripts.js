@@ -77,7 +77,6 @@ function afegirMissatge(e) {
 }
 
 //part de comentaris
-
 function afegirComentari(e) {
     e.preventDefault();
 
@@ -85,8 +84,8 @@ function afegirComentari(e) {
 
     const dades = {
         api_token: '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK',
-        nombre: document.getElementById('nom').value,
-        mensaje: document.getElementById('missatge').value
+        name: document.getElementById('nom').value,
+        content: document.getElementById('missatge').value
     };
 
     fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments', {
@@ -96,14 +95,15 @@ function afegirComentari(e) {
         },
         body: JSON.stringify(dades)
     })
-    .then(resposta => {
+    .then(async resposta => {
         if (resposta.ok) {
             alert('Missatge enviat correctament!');
             formulari.reset();
+            carregarComentaris();
         } else {
-            return resposta.json().then(err => {
-                throw new Error(err.message || 'Error al servidor');
-            });
+            const errorDetall = await resposta.json();
+            console.log("Error detall complet:", JSON.stringify(errorDetall));
+            alert('Hi ha hagut un problema al servidor.');
         }
     })
     .catch(error => {
@@ -121,10 +121,8 @@ async function carregarComentaris() {
     try {
         const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
-        
         const resposta = await fetch(ruta);
         const dades = await resposta.json();
-
         if (!resposta.ok) {
             contenidor.innerHTML = '<p>Error al carregar els comentaris</p>';
             return;
@@ -141,18 +139,17 @@ async function carregarComentaris() {
         for (let i = llista.length - 1; i >= 0; i--) {
             let c = llista[i];
             let divComentari = document.createElement('div');
-            divComentari.classList.add('comentariPublicat'); 
+            divComentari.classList.add('comentariItem'); 
             let contingutHTML = `
                 <div class="comentariInfo">
-                    <p><b>${nomUsuari}</b></p>
+                    <p><b>${c.name}</b></p>
                 </div>
-                <p class="comentariText">${textMissatge}</p>
+                <p class="comentariText">${c.content}</p>
                 <hr>
             `;
             divComentari.innerHTML = contingutHTML;
             contenidor.appendChild(divComentari);
         }
-
     } catch (error) {
         console.log("Error en carregar comentaris:", error);
         contenidor.innerHTML = '<p>No s\'han pogut carregar els comentaris.</p>';
