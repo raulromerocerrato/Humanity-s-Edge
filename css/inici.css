@@ -81,7 +81,7 @@ main{
 }
 
 body.light .imatgePortada img {
-    height: auto; /* igual que modo oscuro para que las media queries funcionen */
+    height: auto;
     display: block;
     margin: 0 auto;
     border-bottom: 2px solid var(--color-amarillo);
