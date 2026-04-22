@@ -88,7 +88,7 @@ async function afegirComentari(e) {
         return;
     }
     const dades = {
-        api_token: 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS',
+        api_token: '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK',
         nombre: inputNom.value,
         mensaje: inputMissatge.value
     };
@@ -121,7 +121,7 @@ async function carregarComentaris() {
     }
     contenidor.innerHTML = '<p>Carregant comentaris...</p>';
     try {
-        const tokenComentaris = 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS';
+        const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
         const resposta = await fetch(ruta);
         const dades = await resposta.json();
@@ -167,7 +167,7 @@ async function carregarPosts() {
     }
     contenidor.innerHTML = '<p class="carregant">Carregant posts…</p>';
     try {
-        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK";
         const resposta = await fetch(url);
         const dades = await resposta.json();
         if (!resposta.ok) {
