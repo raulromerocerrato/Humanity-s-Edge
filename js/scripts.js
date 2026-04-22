@@ -121,7 +121,7 @@ async function carregarComentaris() {
     }
     contenidor.innerHTML = '<p>Carregant comentaris...</p>';
     try {
-        const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
+        const tokenComentaris = 'pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
         const resposta = await fetch(ruta);
         const dades = await resposta.json();
@@ -134,7 +134,7 @@ async function carregarComentaris() {
             llista = dades;
         }
         if (llista.length === 0) {
-            contenidor.innerHTML = '<p>Encara no hi ha comentaris. Sigues el primer!</p>';
+            contenidor.innerHTML = '<p class="senseDades">Encara no hi ha comentaris. Sigues el primer a comentar.</p>';
             return;
         }
         contenidor.innerHTML = '';
@@ -167,7 +167,7 @@ async function carregarPosts() {
     }
     contenidor.innerHTML = '<p class="carregant">Carregant posts…</p>';
     try {
-        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK";
+        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
         const resposta = await fetch(url);
         const dades = await resposta.json();
         if (!resposta.ok) {
