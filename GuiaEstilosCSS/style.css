@@ -320,13 +320,17 @@ body.light .logoInsta{
     }
 
     header{
-        gap: 0;
-    }
-
-    
+        justify-content: space-between;
+        padding: 0 16px;
+    }  
 
     .instagramIcones {
         padding-left: 30px;
         padding-right: 20px;
+    }
+
+    .botonsHeader{
+        display: flex;
+        gap: 10px;
     }
 }
