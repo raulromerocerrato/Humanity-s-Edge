@@ -76,7 +76,7 @@ main{
 }
 
 /* MODO CLARO*/ 
-main{
+body.light main{
     margin-top: 0%;
 }
 

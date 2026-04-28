@@ -14,12 +14,6 @@ main{
     flex-direction: column;
     justify-content: space-between;
 }
-
-body.light main{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../IMG/PersonajeMans_clar.png);
-    background-size: cover;
-    background-position: center;
-}
  
 .mainJugar{
     display: flex;
@@ -104,6 +98,12 @@ body.light main{
 
 
 /* MODO CLARO */
+
+body.light main{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../IMG/PersonajeMans_clar.png);
+    background-size: cover;
+    background-position: center;
+}
 
 body.light .mainJugar h1{
     color: var(--color-amarillo);
