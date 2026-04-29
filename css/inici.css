@@ -81,10 +81,11 @@ body.light main{
 }
 
 body.light .imatgePortada img {
-    height: auto;
     display: block;
     margin: 0 auto;
     border-bottom: 2px solid var(--color-amarillo);
+    max-height: 700px;
+
 }
 
  
@@ -150,7 +151,9 @@ body.light .infoPagines article button:hover {
     .imatgePortada img,
     body.light .imatgePortada img {
         width: 100%;
+        min-height: 275px;
         height: auto;
         object-fit: cover;
+
     }
 }
