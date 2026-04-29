@@ -63,7 +63,6 @@ body.light main {
 
 body.light .box-control{
     display: grid;
-    width: 60%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 125px;
     align-items: center;
