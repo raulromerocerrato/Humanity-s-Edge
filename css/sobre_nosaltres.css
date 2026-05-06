@@ -158,6 +158,10 @@ main {
 
 /*  Modo Blanco */
 
+body.light {
+background-color: var(--color-fondo-claro);
+}
+
 body.light .titol {
     padding: 60px 0 80px;
     border-bottom: 1px solid var(--color-amarillo);
