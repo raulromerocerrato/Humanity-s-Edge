@@ -58,6 +58,7 @@ body{
     font-family: 'WaterSplash', cursive;
     background-color: var(--color-fondo-oscuro);
     margin: 0;
+    padding: 0;
 }
 
 header{
@@ -68,11 +69,10 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    height: var(--header-height);
     gap: 100px;
+    height: var(--header-height);
     border-bottom: #01ed36 2px solid;
     background-color: var(--color-fondo-oscuro);
-    z-index: 1000;
     box-sizing: border-box;
 }
 
@@ -190,7 +190,7 @@ footer a:hover {
 
 
 .instagramLinks{
-    width: 400px;
+    width: 100%;
     color: var(--color-letras-radiactivo);
     display: flex;
     flex-direction: column;
@@ -322,7 +322,7 @@ body.light .logoInsta{
 
     header{
         justify-content: space-between;
-        padding: 0 16px;
+
     }  
 
     .instagramIcones {
