@@ -198,12 +198,13 @@ footer a:hover {
 }
 .instagramLinks p{
     text-align: center;
+    margin: 0 auto;
     height: 35px;
 }
 .instagramIcones{
     display: flex;
     gap: 5px;
-
+    justify-content: center;
 }
 .instagramIcones p{
     width: 0px;
@@ -332,5 +333,11 @@ body.light .logoInsta{
     .botonsHeader{
         display: flex;
         gap: 10px;
+    }
+
+    .instagramLinks{
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
     }
 }
