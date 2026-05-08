@@ -58,7 +58,6 @@ body{
     font-family: 'WaterSplash', cursive;
     background-color: var(--color-fondo-oscuro);
     margin: 0;
-    padding: 0;
 }
 
 header{
@@ -69,10 +68,11 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    gap: 100px;
     height: var(--header-height);
+    gap: 100px;
     border-bottom: #01ed36 2px solid;
     background-color: var(--color-fondo-oscuro);
+    z-index: 1000;
     box-sizing: border-box;
 }
 
@@ -322,7 +322,7 @@ body.light .logoInsta{
 
     header{
         justify-content: space-between;
-
+        padding: 0 16px;
     }  
 
     .instagramIcones {
