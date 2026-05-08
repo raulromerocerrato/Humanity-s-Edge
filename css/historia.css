@@ -42,6 +42,10 @@ main {
 
 /* MODO CLARO*/
 
+body.light {
+    background-color: var(--color-fondo-claro);
+}
+
 body.light .historiaText h1 {
     color: var(--color-amarillo);
     font-size: 32px;
