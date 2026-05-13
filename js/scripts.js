@@ -46,7 +46,7 @@ function afegirMissatge(e) {
     const formulari = document.querySelector('.formulariContacte');
 
     const dades = {
-        api_token: '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK',
+        api_token: 'x7bF74UvGCnfoACoQHTXZOkVaPJy6aavaxexzw91B4EZPDZMSbHN70L9IUpT',
         nombre: document.getElementById('nom').value,
         email: document.getElementById('email').value,
         asunto: document.getElementById('asunto')?.value || 'Contacte web',
@@ -121,7 +121,7 @@ async function carregarComentaris() {
     }
     contenidor.innerHTML = '<p>Carregant comentaris...</p>';
     try {
-        const tokenComentaris = '9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK';
+        const tokenComentaris = 'x7bF74UvGCnfoACoQHTXZOkVaPJy6aavaxexzw91B4EZPDZMSbHN70L9IUpT';
         const ruta = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/" + tokenComentaris;
         const resposta = await fetch(ruta);
         const dades = await resposta.json();
@@ -167,7 +167,7 @@ async function carregarPosts() {
     }
     contenidor.innerHTML = '<p class="carregant">Carregant posts…</p>';
     try {
-        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK";
+        const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/" + "x7bF74UvGCnfoACoQHTXZOkVaPJy6aavaxexzw91B4EZPDZMSbHN70L9IUpT";
         const resposta = await fetch(url);
         const dades = await resposta.json();
         if (!resposta.ok) {
