@@ -239,7 +239,7 @@ function mostrarBarraNavegacio() {
 // pagina puntuació 
 
 const url = "https://phpstack-1076337-5399863.cloudwaysapps.com/";
-const token = "9pvalH87imnKBsayDEOIOELePsgHPj4p69NsBSf0vrRh9mIYIHVDePWKCYjK";
+const token = "x7bF74UvGCnfoACoQHTXZOkVaPJy6aavaxexzw91B4EZPDZMSbHN70L9IUpT";
 
 const tiempoActualizacion = 5000;
 
